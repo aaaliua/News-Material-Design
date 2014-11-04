@@ -89,8 +89,8 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 	private Paint rectPaint;
 	private Paint dividerPaint;
 
-	private int indicatorColor = 0xFF666666;
-	private int underlineColor = 0x1A000000;
+	private int indicatorColor = /*Color.parseColor("#ffffff");*/0xFF666666;
+	private int underlineColor = Color.parseColor("#689F38");/*0x1A000000;#689F38*/
 	private int dividerColor = 0x1A000000;
 
 	private boolean shouldExpand = false;
@@ -99,14 +99,14 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 	private int scrollOffset = 52;
 	private int indicatorHeight = 8;
 	private int underlineHeight = 2;
-	private int dividerPadding = 12;
+	private int dividerPadding = 14;
 	//每个tab的内填充
-	private int tabPadding = 16;
+	private int tabPadding = 14;
 	private int dividerWidth = 1;
 	private boolean isAnima = true;
 
-	private int tabTextSize = 12;
-	private int tabTextColor = Color.parseColor("#10ffffff");/*0xFF666666;*/
+	private int tabTextSize = 13;
+	private int tabTextColor = Color.argb(55, 0, 255, 0);/*Color.parseColor("#10ffffff");*//*0xFF666666;*/
 	private int tabTextFocusColor = Color.parseColor("#ffffff");
 	private Typeface tabTypeface = null;
 	//字体样式  是否加粗  斜体

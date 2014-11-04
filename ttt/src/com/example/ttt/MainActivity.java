@@ -28,7 +28,7 @@ public class MainActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+
 		if (savedInstanceState == null) {
 			FragmentTransaction transaction = getFragmentManager()
 					.beginTransaction();
@@ -43,18 +43,19 @@ public class MainActivity extends ActionBarActivity {
 
 	private void configureToolbar() {
 		Toolbar mainToolbar = (Toolbar) findViewById(R.id.toolbar);
-		
-		if(VERSION.SDK_INT >= VERSION_CODES.KITKAT) {
-            //透明状态栏
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);	//顶部
-            mainToolbar.setPadding(0, 72, 0, 0);
-            //透明导航栏
-//          getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);//底部
-    }else if(VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP){
-    	
-		getWindow().setStatusBarColor(R.color.theme_toolbar);
-    }
-		
+
+		if (VERSION.SDK_INT >= VERSION_CODES.KITKAT) {
+			// 透明状态栏
+			getWindow().addFlags(
+					WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); // 顶部
+			mainToolbar.setPadding(0, 72, 0, 0);
+			// 透明导航栏
+			// getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);//底部
+		} else if (VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP) {
+
+			getWindow().setStatusBarColor(R.color.theme_toolbar);
+		}
+
 		setSupportActionBar(mainToolbar);
 		getSupportActionBar().setTitle("首页");
 
@@ -64,10 +65,10 @@ public class MainActivity extends ActionBarActivity {
 
 				if (mDrawerLayout.isDrawerOpen(Gravity.START)) {
 					mDrawerLayout.closeDrawer(Gravity.START);
-					
+
 				} else {
 					mDrawerLayout.openDrawer(Gravity.START);
-					
+
 				}
 			}
 		});
@@ -117,9 +118,9 @@ public class MainActivity extends ActionBarActivity {
 		if (id == R.id.action_settings) {
 			return true;
 		}
-		if(id == R.id.menu_search){
-//			AnalyticsManager.sendEvent(SCREEN_LABEL, "launchsearch", "");
-//            startActivity(new Intent(this, SearchActivity.class));
+		if (id == R.id.menu_search) {
+			// AnalyticsManager.sendEvent(SCREEN_LABEL, "launchsearch", "");
+			// startActivity(new Intent(this, SearchActivity.class));
 		}
 
 		if (mDrawerToggle.onOptionsItemSelected(item)) {

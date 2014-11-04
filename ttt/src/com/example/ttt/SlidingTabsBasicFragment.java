@@ -81,7 +81,7 @@ public class SlidingTabsBasicFragment extends Fragment {
         
         
         mSlidingTabLayout.setIndicatorColor(getResources().getColor(android.R.color.white));
-        mSlidingTabLayout.setIndicatorHeight(8);
+        mSlidingTabLayout.setIndicatorHeight(12);
         mSlidingTabLayout.setTextColorResource(android.R.color.white);
         mSlidingTabLayout.setDividerColor(getResources().getColor(android.R.color.transparent));
         mSlidingTabLayout.setBackgroundColor(getResources().getColor(R.color.theme_toolbar));
@@ -96,14 +96,14 @@ public class SlidingTabsBasicFragment extends Fragment {
      * {@link SlidingTabLayout}.
      */
     class SamplePagerAdapter extends PagerAdapter {
-        final String [] TITLES = {"CATEGORIES", "HOME", "TOP SELLING", "TOP GAMES", "TOP GROSSING"};
+        final String [] TITLES = {"类别", "首页", "热门付费", "热门免费", "创收最高", "畅销付费新品", "热门免费新品", "上升最快"};
 
         /**
          * @return the number of pages to display
          */
         @Override
         public int getCount() {
-            return 5;
+            return TITLES.length;
         }
 
         /**
