@@ -17,19 +17,26 @@
 package com.example.ttt;
 
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.aaaliua.view.PagerSlidingTabStrip;
 import com.saulmm.material.slidingtabs.views.SlidingTabLayout;
 
 
+@SuppressLint("NewApi")
 public class SlidingTabsBasicFragment extends Fragment {
 
     static final String LOG_TAG = "SlidingTabsBasicFragment";
@@ -44,6 +51,7 @@ public class SlidingTabsBasicFragment extends Fragment {
      * A {@link ViewPager} which will be used in conjunction with the {@link SlidingTabLayout} above.
      */
     private ViewPager mViewPager;
+    private View mView;
 
     /**
      * Inflates the {@link View} which will be displayed by this {@link Fragment}, from the app's
@@ -69,6 +77,7 @@ public class SlidingTabsBasicFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         // BEGIN_INCLUDE (setup_viewpager)
         // Get the ViewPager and set it's PagerAdapter so that it can display items
+        mView = (View) view.findViewById(R.id.layer);
         mViewPager = (ViewPager) view.findViewById(R.id.viewpager);
         mViewPager.setAdapter(new SamplePagerAdapter());
         // END_INCLUDE (setup_viewpager)
@@ -139,8 +148,28 @@ public class SlidingTabsBasicFragment extends Fragment {
             View view = getActivity().getLayoutInflater().inflate(R.layout.item_sliding_pager,
                     container, false);
             // Add the newly created View to the ViewPager
+            final ImageView img = (ImageView)view.findViewById(R.id.b1);
+            
+            img.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
 
-
+				    Intent intent = new Intent(getActivity(),Test.class);
+		            String transitionName = "aa";
+		            
+		            ActivityOptionsCompat options =
+		            		ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(),
+		            			img,   // The view which starts the transition
+		            		    transitionName    // The transitionName of the view we’re transitioning to
+		            		    );
+					
+					
+					ActivityCompat.startActivity(getActivity(), intent, options.toBundle());
+				}
+			});
+        
+            
             container.addView(view);
 
 

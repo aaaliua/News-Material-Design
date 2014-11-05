@@ -106,8 +106,8 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 	private boolean isAnima = true;
 
 	private int tabTextSize = 13;
-	private int tabTextColor = Color.argb(55, 0, 255, 0);/*Color.parseColor("#10ffffff");*//*0xFF666666;*/
-	private int tabTextFocusColor = Color.parseColor("#ffffff");
+	private int tabTextColor = 0x50ffffff;/*Color.parseColor("#10ffffff");*//*0xFF666666;*/
+	private int tabTextFocusColor = 0x50ffffff/*Color.parseColor("#ffffff")*/;
 	private Typeface tabTypeface = null;
 	//字体样式  是否加粗  斜体
 	private int tabTypefaceStyle = Typeface.NORMAL;
@@ -292,9 +292,9 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 				tab.setTypeface(tabTypeface, tabTypefaceStyle);
 //				tab.setTextColor(tabTextColor);
 				if(pager.getCurrentItem() == i){
-					tab.setTextColor(tabTextFocusColor);
-				}else{
 					tab.setTextColor(tabTextColor);
+				}else{
+					tab.setTextColor(tabTextFocusColor);
 				}
 //				tab.setTextColor(getResources().getColor(R.color.text_color_selector));
 

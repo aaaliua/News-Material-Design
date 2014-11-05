@@ -1,5 +1,6 @@
 package com.example.ttt;
 
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -65,7 +66,7 @@ public class MainActivity extends ActionBarActivity {
 
 				if (mDrawerLayout.isDrawerOpen(Gravity.START)) {
 					mDrawerLayout.closeDrawer(Gravity.START);
-
+					
 				} else {
 					mDrawerLayout.openDrawer(Gravity.START);
 
@@ -77,7 +78,7 @@ public class MainActivity extends ActionBarActivity {
 	private void configureDrawer() {
 		// Configure drawer
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-
+		
 		mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
 				R.string.drawer_open, R.string.drawer_closed) {
 
@@ -121,6 +122,8 @@ public class MainActivity extends ActionBarActivity {
 		if (id == R.id.menu_search) {
 			// AnalyticsManager.sendEvent(SCREEN_LABEL, "launchsearch", "");
 			// startActivity(new Intent(this, SearchActivity.class));
+			
+		
 		}
 
 		if (mDrawerToggle.onOptionsItemSelected(item)) {
