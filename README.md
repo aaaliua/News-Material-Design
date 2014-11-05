@@ -2,4 +2,4 @@
 News-Material-Design
 ====================
 
-(https://raw.githubusercontent.com/aaaliua/News-Material-Design/master/Screenshots/home.png)
+https://raw.githubusercontent.com/aaaliua/News-Material-Design/master/Screenshots/home.png
