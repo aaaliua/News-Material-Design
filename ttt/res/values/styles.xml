@@ -14,8 +14,11 @@
 
     <!-- Application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:colorPrimary">@color/primary</item>  
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+     <item name="colorPrimary">@color/indigo_700</item>
+    <item name="colorPrimaryDark">@color/indigo_500</item>
+    <item name="colorAccent">@color/cyan_500</item>
+    <item name="android:windowContentOverlay">@null</item>
     </style>
 
 </resources>

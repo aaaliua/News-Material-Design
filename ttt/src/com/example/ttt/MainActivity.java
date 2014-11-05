@@ -1,5 +1,9 @@
 package com.example.ttt;
 
+
+import com.afollestad.materialdialogs.MaterialDialog;
+import com.afollestad.materialdialogs.Theme;
+
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
@@ -31,11 +35,13 @@ public class MainActivity extends ActionBarActivity {
 		setContentView(R.layout.activity_main);
 
 		if (savedInstanceState == null) {
-			FragmentTransaction transaction = getFragmentManager()
-					.beginTransaction();
-			SlidingTabsBasicFragment fragment = new SlidingTabsBasicFragment();
-			transaction.replace(R.id.sample_content_fragment, fragment);
-			transaction.commit();
+//			FragmentTransaction transaction = getFragmentManager()
+//					.beginTransaction();
+//			SlidingTabsBasicFragment fragment = new SlidingTabsBasicFragment();
+//			transaction.replace(R.id.sample_content_fragment, fragment);
+//			transaction.commit();
+			
+			getSupportFragmentManager().beginTransaction().replace(R.id.sample_content_fragment, new SlidingTabsBasicFragment()).commit();
 		}
 
 		configureToolbar();
@@ -117,13 +123,47 @@ public class MainActivity extends ActionBarActivity {
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
+			new MaterialDialog.Builder(MainActivity.this)
+	        .title("Google Wifi")
+	        .positiveText(R.string.accept)
+	        .customView(R.layout.dialog_customview)
+	        .positiveText("Connect")
+	        .positiveColor(Color.parseColor("#03a9f4"))
+	        .build()
+	        .show();
 			return true;
+		}
+		if (id == R.id.action_settings2) {
+			new MaterialDialog.Builder(this)
+	        .title("Social Networks")
+	        .items(new String[]{"Twitter", "Google+", "Instagram", "Facebook"})
+	        .itemsCallbackMultiChoice(new MaterialDialog.ListCallbackMulti() {
+	            @Override
+	            public void onSelection(MaterialDialog dialog, Integer[] which, String[] text) {
+	            }
+	        })
+	        .positiveText("Choose")
+	        .positiveColor(getResources().getColor(R.color.material_pink_500))
+	        .build()
+	        .show();
 		}
 		if (id == R.id.menu_search) {
 			// AnalyticsManager.sendEvent(SCREEN_LABEL, "launchsearch", "");
 			// startActivity(new Intent(this, SearchActivity.class));
 			
 		
+		}
+		
+		if(id == R.id.About){
+			//show Material Dialog
+			new MaterialDialog.Builder(MainActivity.this)
+	        .title("Permissions")
+	        .content("This app determines your phone's location and shares it with Google in order to serve personalized alerts to you. This allows for a better overall app experience.")
+	        .theme(Theme.LIGHT)  // the default is light, so you don't need this line
+	        .positiveText(R.string.accept)  // the default is 'Accept'
+	        .negativeText(R.string.decline)  // leaving this line out will remove the negative button
+	        .build()
+	        .show();
 		}
 
 		if (mDrawerToggle.onOptionsItemSelected(item)) {

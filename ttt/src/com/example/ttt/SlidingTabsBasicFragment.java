@@ -17,12 +17,16 @@
 package com.example.ttt;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.annotation.SuppressLint;
-import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
@@ -32,12 +36,14 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.aaaliua.utils.FragmentViewPagerAdapter;
 import com.aaaliua.view.PagerSlidingTabStrip;
+import com.saulmm.material.fragments.ContentFragment;
 import com.saulmm.material.slidingtabs.views.SlidingTabLayout;
 
 
 @SuppressLint("NewApi")
-public class SlidingTabsBasicFragment extends Fragment {
+public class SlidingTabsBasicFragment extends android.support.v4.app.Fragment {
 
     static final String LOG_TAG = "SlidingTabsBasicFragment";
 
@@ -57,6 +63,9 @@ public class SlidingTabsBasicFragment extends Fragment {
      * Inflates the {@link View} which will be displayed by this {@link Fragment}, from the app's
      * resources.
      */
+    
+    final String [] TITLES = {"类别", "首页", "热门付费", "热门免费", "创收最高", "畅销付费新品", "热门免费新品", "上升最快"};
+    List<Fragment> fragments;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
@@ -77,9 +86,16 @@ public class SlidingTabsBasicFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         // BEGIN_INCLUDE (setup_viewpager)
         // Get the ViewPager and set it's PagerAdapter so that it can display items
+    	
+    	fragments = new ArrayList<Fragment>();
+		for(int i = 0 ;i<TITLES.length;i++){
+			Fragment fm = new ContentFragment();
+			fragments.add(fm);
+		}
+    	
         mView = (View) view.findViewById(R.id.layer);
         mViewPager = (ViewPager) view.findViewById(R.id.viewpager);
-        mViewPager.setAdapter(new SamplePagerAdapter());
+        mViewPager.setAdapter(new MyframPagerAdapter(getActivity().getSupportFragmentManager(),mViewPager,fragments));
         // END_INCLUDE (setup_viewpager)
 
         // BEGIN_INCLUDE (setup_slidingtablayout)
@@ -92,8 +108,7 @@ public class SlidingTabsBasicFragment extends Fragment {
         mSlidingTabLayout.setIndicatorColor(getResources().getColor(android.R.color.white));
         mSlidingTabLayout.setIndicatorHeight(12);
         mSlidingTabLayout.setTextColorResource(android.R.color.white);
-        mSlidingTabLayout.setDividerColor(getResources().getColor(android.R.color.transparent));
-        mSlidingTabLayout.setBackgroundColor(getResources().getColor(R.color.theme_toolbar));
+//        mSlidingTabLayout.setDividerColor(getResources().getColor(android.R.color.transparent));//间距线条
         // END_INCLUDE (setup_slidingtablayout)
     }
     // END_INCLUDE (fragment_onviewcreated)
@@ -104,88 +119,118 @@ public class SlidingTabsBasicFragment extends Fragment {
      * this class is the {@link #getPageTitle(int)} method which controls what is displayed in the
      * {@link SlidingTabLayout}.
      */
-    class SamplePagerAdapter extends PagerAdapter {
-        final String [] TITLES = {"类别", "首页", "热门付费", "热门免费", "创收最高", "畅销付费新品", "热门免费新品", "上升最快"};
+//    class SamplePagerAdapter extends PagerAdapter {
+//        final String [] TITLES = {"类别", "首页", "热门付费", "热门免费", "创收最高", "畅销付费新品", "热门免费新品", "上升最快"};
+//
+//        /**
+//         * @return the number of pages to display
+//         */
+//        @Override
+//        public int getCount() {
+//            return TITLES.length;
+//        }
+//
+//        /**
+//         * @return true if the value returned from {@link #instantiateItem(ViewGroup, int)} is the
+//         * same object as the {@link View} added to the {@link ViewPager}.
+//         */
+//        @Override
+//        public boolean isViewFromObject(View view, Object o) {
+//            return o == view;
+//        }
+//
+//        // BEGIN_INCLUDE (pageradapter_getpagetitle)
+//        /**
+//         * Return the title of the item at {@code position}. This is important as what this method
+//         * returns is what is displayed in the {@link SlidingTabLayout}.
+//         * <p>
+//         * Here we construct one using the position value, but for real application the title should
+//         * refer to the item's contents.
+//         */
+//        @Override
+//        public CharSequence getPageTitle(int position) {
+//            return TITLES[position];
+//        }
+//        // END_INCLUDE (pageradapter_getpagetitle)
+//
+//        /**
+//         * Instantiate the {@link View} which should be displayed at {@code position}. Here we
+//         * inflate a layout from the apps resources and then change the text view to signify the position.
+//         */
+//        @Override
+//        public Object instantiateItem(ViewGroup container, int position) {
+//            // Inflate a new layout from our resources
+//            View view = getActivity().getLayoutInflater().inflate(R.layout.item_sliding_pager,
+//                    container, false);
+//            // Add the newly created View to the ViewPager
+//            final ImageView img = (ImageView)view.findViewById(R.id.b1);
+//            
+//            img.setOnClickListener(new OnClickListener() {
+//				
+//				@Override
+//				public void onClick(View v) {
+//
+//				    Intent intent = new Intent(getActivity(),Test.class);
+//		            String transitionName = "aa";
+//		            
+//		            ActivityOptionsCompat options =
+//		            		ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(),
+//		            			img,   // The view which starts the transition
+//		            		    transitionName    // The transitionName of the view we’re transitioning to
+//		            		    );
+//					
+//					
+//					ActivityCompat.startActivity(getActivity(), intent, options.toBundle());
+//				}
+//			});
+//        
+//            
+//            container.addView(view);
+//
+//
+//            // Return the View
+//            return view;
+//        }
+//
+//        /**
+//         * Destroy the item from the {@link ViewPager}. In our case this is simply removing the
+//         * {@link View}.
+//         */
+//        @Override
+//        public void destroyItem(ViewGroup container, int position, Object object) {
+//            container.removeView((View) object);
+//            Log.i(LOG_TAG, "destroyItem() [position: " + position + "]");
+//        }
+//
+//    }
+    
+    
+    
+    
+    
+    
+    public class MyframPagerAdapter extends FragmentViewPagerAdapter {
 
-        /**
-         * @return the number of pages to display
-         */
-        @Override
-        public int getCount() {
-            return TITLES.length;
-        }
+    	
+		
+		public MyframPagerAdapter(FragmentManager fragmentManager,
+				ViewPager viewPager, List<Fragment> fragments) {
+			super(fragmentManager, viewPager, fragments);
+		}
 
-        /**
-         * @return true if the value returned from {@link #instantiateItem(ViewGroup, int)} is the
-         * same object as the {@link View} added to the {@link ViewPager}.
-         */
-        @Override
-        public boolean isViewFromObject(View view, Object o) {
-            return o == view;
-        }
+		//为指示器显示标题使用
+		@Override
+		public CharSequence getPageTitle(int position) {
+			return TITLES[position];
+		}
+		
 
-        // BEGIN_INCLUDE (pageradapter_getpagetitle)
-        /**
-         * Return the title of the item at {@code position}. This is important as what this method
-         * returns is what is displayed in the {@link SlidingTabLayout}.
-         * <p>
-         * Here we construct one using the position value, but for real application the title should
-         * refer to the item's contents.
-         */
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return TITLES[position];
-        }
-        // END_INCLUDE (pageradapter_getpagetitle)
-
-        /**
-         * Instantiate the {@link View} which should be displayed at {@code position}. Here we
-         * inflate a layout from the apps resources and then change the text view to signify the position.
-         */
-        @Override
-        public Object instantiateItem(ViewGroup container, int position) {
-            // Inflate a new layout from our resources
-            View view = getActivity().getLayoutInflater().inflate(R.layout.item_sliding_pager,
-                    container, false);
-            // Add the newly created View to the ViewPager
-            final ImageView img = (ImageView)view.findViewById(R.id.b1);
-            
-            img.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-
-				    Intent intent = new Intent(getActivity(),Test.class);
-		            String transitionName = "aa";
-		            
-		            ActivityOptionsCompat options =
-		            		ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(),
-		            			img,   // The view which starts the transition
-		            		    transitionName    // The transitionName of the view we’re transitioning to
-		            		    );
-					
-					
-					ActivityCompat.startActivity(getActivity(), intent, options.toBundle());
-				}
-			});
-        
-            
-            container.addView(view);
-
-
-            // Return the View
-            return view;
-        }
-
-        /**
-         * Destroy the item from the {@link ViewPager}. In our case this is simply removing the
-         * {@link View}.
-         */
-        @Override
-        public void destroyItem(ViewGroup container, int position, Object object) {
-            container.removeView((View) object);
-            Log.i(LOG_TAG, "destroyItem() [position: " + position + "]");
-        }
-
-    }
+	}
+    
+    
+    
+    
+    
+    
+    
 }
