@@ -7,18 +7,34 @@
     <color name="theme_default_primary">#303f9f</color>
     <color name="theme_default_primary_dark">#E91E63</color>
     <color name="theme_window_background">#2A2A2A</color>
+    
+    
     <color name="accent">#EEFF41</color>
     <color name="gray_row_color">#ff515252</color>
-    
-     <color name="software_textColor_selected">#00aeef</color>
+    <color name="software_textColor_selected">#00aeef</color>
     <color name="software_textColor_unselected">#70000000</color>
-      <color name="indigo_500">#3f51b5</color>
-  <color name="indigo_700">#303f9f</color>
-  <color name="cyan_500">#00bcd4</color>
-  
-      <color name="material_indigo_500">#3F51B5</color>
+    <color name="indigo_500">#3f51b5</color>
+    <color name="indigo_700">#303f9f</color>
+    <color name="indigo_red">#5677fc</color>
+    <color name="cyan_500">#00bcd4</color>
+    
+    
+    <color name="material_indigo_500">#3F51B5</color>
     <color name="material_indigo_600">#3949AB</color>
     <color name="material_pink_500">#E91E63</color>
     <color name="material_red_400">#EF5350</color>
-  
+    
+    
+    <color name="fab_accent">#ff4081</color>
+    <color name="accent_pressed">#f50057</color>
+    <color name="ripple">#ff80ab</color>
+
+    
+     <color name="red">#FFC93437</color>
+    <color name="blue">#FF375BF1</color>
+    <color name="yellow">#FFF7D23E</color>
+    <color name="green">#FF34A350</color>
+    
+    
+      <color name="transalt_">#20000000</color>
 </resources>

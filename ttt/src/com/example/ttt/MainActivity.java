@@ -51,11 +51,12 @@ public class MainActivity extends ActionBarActivity {
 	private void configureToolbar() {
 		Toolbar mainToolbar = (Toolbar) findViewById(R.id.toolbar);
 
+		
 		if (VERSION.SDK_INT >= VERSION_CODES.KITKAT) {
 			// 透明状态栏
 			getWindow().addFlags(
 					WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); // 顶部
-			mainToolbar.setPadding(0, 72, 0, 0);
+			mainToolbar.setPadding(0, 72, 0, 0);		//丁图设置透明后 界面会向上顶  让其内填充使其美观
 			// 透明导航栏
 			// getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);//底部
 		} else if (VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP) {

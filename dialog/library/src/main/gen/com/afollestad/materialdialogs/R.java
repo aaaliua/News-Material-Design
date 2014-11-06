@@ -592,6 +592,52 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int expandActivityOverflowButtonDrawable=0x7f010085;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int fab_colorNormal=0x7f0100af;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int fab_colorPressed=0x7f0100ae;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int fab_colorRipple=0x7f0100b0;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int fab_shadow=0x7f0100b1;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>normal</code></td><td>0</td><td></td></tr>
+<tr><td><code>mini</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static int fab_type=0x7f0100b2;
         /**  The max gap between the bars when they are parallel to each other 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -1425,19 +1471,19 @@ containing a value of this type.
         public static int abc_config_showMenuShortcutsWhenKeyboardPresent=0x7f050003;
     }
     public static final class color {
-        public static int abc_background_cache_hint_selector_material_dark=0x7f06003c;
-        public static int abc_background_cache_hint_selector_material_light=0x7f06003d;
+        public static int abc_background_cache_hint_selector_material_dark=0x7f06003d;
+        public static int abc_background_cache_hint_selector_material_light=0x7f06003e;
         public static int abc_input_method_navigation_guard=0x7f060003;
-        public static int abc_primary_text_disable_only_material_dark=0x7f06003e;
-        public static int abc_primary_text_disable_only_material_light=0x7f06003f;
-        public static int abc_primary_text_material_dark=0x7f060040;
-        public static int abc_primary_text_material_light=0x7f060041;
-        public static int abc_search_url_text=0x7f060042;
+        public static int abc_primary_text_disable_only_material_dark=0x7f06003f;
+        public static int abc_primary_text_disable_only_material_light=0x7f060040;
+        public static int abc_primary_text_material_dark=0x7f060041;
+        public static int abc_primary_text_material_light=0x7f060042;
+        public static int abc_search_url_text=0x7f060043;
         public static int abc_search_url_text_normal=0x7f060000;
         public static int abc_search_url_text_pressed=0x7f060002;
         public static int abc_search_url_text_selected=0x7f060001;
-        public static int abc_secondary_text_material_dark=0x7f060043;
-        public static int abc_secondary_text_material_light=0x7f060044;
+        public static int abc_secondary_text_material_dark=0x7f060044;
+        public static int abc_secondary_text_material_light=0x7f060045;
         public static int accent_material_dark=0x7f06000f;
         public static int accent_material_light=0x7f06000e;
         public static int background_floating_material_dark=0x7f060006;
@@ -1479,6 +1525,7 @@ containing a value of this type.
         public static int link_text_material_dark=0x7f060022;
         public static int link_text_material_light=0x7f060023;
         public static int material_blue_500=0x7f06003b;
+        public static int material_blue_600=0x7f06003c;
         public static int material_blue_grey_800=0x7f06002e;
         public static int material_blue_grey_900=0x7f06002f;
         public static int material_blue_grey_950=0x7f060030;
@@ -1644,6 +1691,12 @@ containing a value of this type.
         public static int dialog_frame_margin=0x7f07002b;
         public static int disabled_alpha_material_dark=0x7f070001;
         public static int disabled_alpha_material_light=0x7f070000;
+        public static int fab_elevation_lollipop=0x7f070040;
+        public static int fab_min_significant_scroll=0x7f07003f;
+        public static int fab_mini_shadow_size=0x7f07003e;
+        public static int fab_shadow_size=0x7f07003d;
+        public static int fab_size_mini=0x7f07003c;
+        public static int fab_size_normal=0x7f07003b;
         public static int listitem_height=0x7f070036;
         public static int listitem_textsize=0x7f070035;
         public static int title_margin_customview=0x7f07002e;
@@ -1702,90 +1755,92 @@ containing a value of this type.
         public static int abc_textfield_search_default_mtrl_alpha=0x7f020031;
         public static int abc_textfield_search_material=0x7f020032;
         public static int ic_action_close=0x7f020033;
+        public static int shadow=0x7f020034;
     }
     public static final class id {
-        public static int action_bar=0x7f090033;
+        public static int action_bar=0x7f090034;
         public static int action_bar_activity_content=0x7f090003;
-        public static int action_bar_container=0x7f090032;
-        public static int action_bar_root=0x7f09002e;
+        public static int action_bar_container=0x7f090033;
+        public static int action_bar_root=0x7f09002f;
         public static int action_bar_spinner=0x7f090002;
-        public static int action_bar_subtitle=0x7f090021;
-        public static int action_bar_title=0x7f090020;
-        public static int action_context_bar=0x7f090034;
+        public static int action_bar_subtitle=0x7f090022;
+        public static int action_bar_title=0x7f090021;
+        public static int action_context_bar=0x7f090035;
         public static int action_menu_divider=0x7f090005;
         public static int action_menu_presenter=0x7f090006;
-        public static int action_mode_bar=0x7f090030;
-        public static int action_mode_bar_stub=0x7f09002f;
-        public static int action_mode_close_button=0x7f090022;
-        public static int activity_chooser_view_content=0x7f090023;
+        public static int action_mode_bar=0x7f090031;
+        public static int action_mode_bar_stub=0x7f090030;
+        public static int action_mode_close_button=0x7f090023;
+        public static int activity_chooser_view_content=0x7f090024;
         public static int always=0x7f090014;
         public static int beginning=0x7f09001b;
         public static int bottom=0x7f09001e;
-        public static int buttonDefaultFrame=0x7f09004f;
-        public static int buttonDefaultNegative=0x7f090051;
-        public static int buttonDefaultNeutral=0x7f090050;
-        public static int buttonDefaultPositive=0x7f090052;
-        public static int buttonStackedFrame=0x7f090053;
-        public static int buttonStackedNegative=0x7f090055;
-        public static int buttonStackedNeutral=0x7f090056;
-        public static int buttonStackedPositive=0x7f090054;
-        public static int checkbox=0x7f09002b;
+        public static int buttonDefaultFrame=0x7f090050;
+        public static int buttonDefaultNegative=0x7f090052;
+        public static int buttonDefaultNeutral=0x7f090051;
+        public static int buttonDefaultPositive=0x7f090053;
+        public static int buttonStackedFrame=0x7f090054;
+        public static int buttonStackedNegative=0x7f090056;
+        public static int buttonStackedNeutral=0x7f090057;
+        public static int buttonStackedPositive=0x7f090055;
+        public static int checkbox=0x7f09002c;
         public static int collapseActionView=0x7f090015;
-        public static int content=0x7f090049;
-        public static int control=0x7f090047;
-        public static int customViewDivider=0x7f09004d;
-        public static int customViewFrame=0x7f09004b;
-        public static int customViewScroll=0x7f09004a;
-        public static int decor_content_parent=0x7f090031;
-        public static int default_activity_button=0x7f090026;
+        public static int content=0x7f09004a;
+        public static int control=0x7f090048;
+        public static int customViewDivider=0x7f09004e;
+        public static int customViewFrame=0x7f09004c;
+        public static int customViewScroll=0x7f09004b;
+        public static int decor_content_parent=0x7f090032;
+        public static int default_activity_button=0x7f090027;
         public static int dialog=0x7f090019;
         public static int disableHome=0x7f09000d;
         public static int dropdown=0x7f09001a;
-        public static int edit_query=0x7f090035;
+        public static int edit_query=0x7f090036;
         public static int end=0x7f09001c;
-        public static int expand_activities_button=0x7f090024;
-        public static int expanded_menu=0x7f09002a;
+        public static int expand_activities_button=0x7f090025;
+        public static int expanded_menu=0x7f09002b;
         public static int home=0x7f090000;
         public static int homeAsUp=0x7f09000e;
-        public static int icon=0x7f090028;
+        public static int icon=0x7f090029;
         public static int ifRoom=0x7f090016;
-        public static int image=0x7f090025;
-        public static int listFrame=0x7f09004e;
+        public static int image=0x7f090026;
+        public static int listFrame=0x7f09004f;
         public static int listMode=0x7f09000a;
-        public static int list_item=0x7f090027;
-        public static int mainFrame=0x7f090048;
+        public static int list_item=0x7f090028;
+        public static int mainFrame=0x7f090049;
         public static int middle=0x7f09001d;
+        public static int mini=0x7f090020;
         public static int never=0x7f090017;
         public static int none=0x7f09000f;
         public static int normal=0x7f09000b;
-        public static int password=0x7f090041;
-        public static int password2=0x7f090045;
-        public static int password3=0x7f090043;
+        public static int password=0x7f090042;
+        public static int password2=0x7f090046;
+        public static int password3=0x7f090044;
         public static int progress_circular=0x7f090007;
         public static int progress_horizontal=0x7f090008;
-        public static int radio=0x7f09002d;
-        public static int search_badge=0x7f090037;
-        public static int search_bar=0x7f090036;
-        public static int search_button=0x7f090038;
-        public static int search_close_btn=0x7f09003d;
-        public static int search_edit_frame=0x7f090039;
-        public static int search_go_btn=0x7f09003f;
-        public static int search_mag_icon=0x7f09003a;
-        public static int search_plate=0x7f09003b;
-        public static int search_src_text=0x7f09003c;
-        public static int search_voice_btn=0x7f090040;
-        public static int shortcut=0x7f09002c;
+        public static int radio=0x7f09002e;
+        public static int search_badge=0x7f090038;
+        public static int search_bar=0x7f090037;
+        public static int search_button=0x7f090039;
+        public static int search_close_btn=0x7f09003e;
+        public static int search_edit_frame=0x7f09003a;
+        public static int search_go_btn=0x7f090040;
+        public static int search_mag_icon=0x7f09003b;
+        public static int search_plate=0x7f09003c;
+        public static int search_src_text=0x7f09003d;
+        public static int search_voice_btn=0x7f090041;
+        public static int shortcut=0x7f09002d;
         public static int showCustom=0x7f090010;
         public static int showHome=0x7f090011;
-        public static int showPassword=0x7f090042;
-        public static int showPassword2=0x7f090046;
-        public static int showPassword3=0x7f090044;
+        public static int showPassword=0x7f090043;
+        public static int showPassword2=0x7f090047;
+        public static int showPassword3=0x7f090045;
         public static int showTitle=0x7f090012;
         public static int split_action_bar=0x7f090004;
-        public static int submit_area=0x7f09003e;
+        public static int submit_area=0x7f09003f;
         public static int tabMode=0x7f09000c;
-        public static int title=0x7f090029;
-        public static int titleCustomView=0x7f09004c;
+        public static int title=0x7f09002a;
+        public static int titleCustomView=0x7f09004d;
         public static int top=0x7f09001f;
         public static int up=0x7f090001;
         public static int useLogo=0x7f090013;
@@ -3141,6 +3196,104 @@ containing a value of this type.
           @attr name com.afollestad.materialdialogs:topBottomBarArrowSize
         */
         public static int DrawerArrowToggle_topBottomBarArrowSize = 4;
+        /** Attributes that can be used with a FloatingActionButton.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #FloatingActionButton_fab_colorNormal com.afollestad.materialdialogs:fab_colorNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_fab_colorPressed com.afollestad.materialdialogs:fab_colorPressed}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_fab_colorRipple com.afollestad.materialdialogs:fab_colorRipple}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_fab_shadow com.afollestad.materialdialogs:fab_shadow}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_fab_type com.afollestad.materialdialogs:fab_type}</code></td><td></td></tr>
+           </table>
+           @see #FloatingActionButton_fab_colorNormal
+           @see #FloatingActionButton_fab_colorPressed
+           @see #FloatingActionButton_fab_colorRipple
+           @see #FloatingActionButton_fab_shadow
+           @see #FloatingActionButton_fab_type
+         */
+        public static final int[] FloatingActionButton = {
+            0x7f0100ae, 0x7f0100af, 0x7f0100b0, 0x7f0100b1,
+            0x7f0100b2
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.afollestad.materialdialogs.R.attr#fab_colorNormal}
+          attribute's value can be found in the {@link #FloatingActionButton} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.afollestad.materialdialogs:fab_colorNormal
+        */
+        public static int FloatingActionButton_fab_colorNormal = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.afollestad.materialdialogs.R.attr#fab_colorPressed}
+          attribute's value can be found in the {@link #FloatingActionButton} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.afollestad.materialdialogs:fab_colorPressed
+        */
+        public static int FloatingActionButton_fab_colorPressed = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.afollestad.materialdialogs.R.attr#fab_colorRipple}
+          attribute's value can be found in the {@link #FloatingActionButton} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.afollestad.materialdialogs:fab_colorRipple
+        */
+        public static int FloatingActionButton_fab_colorRipple = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.afollestad.materialdialogs.R.attr#fab_shadow}
+          attribute's value can be found in the {@link #FloatingActionButton} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.afollestad.materialdialogs:fab_shadow
+        */
+        public static int FloatingActionButton_fab_shadow = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.afollestad.materialdialogs.R.attr#fab_type}
+          attribute's value can be found in the {@link #FloatingActionButton} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>normal</code></td><td>0</td><td></td></tr>
+<tr><td><code>mini</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name com.afollestad.materialdialogs:fab_type
+        */
+        public static int FloatingActionButton_fab_type = 4;
         /** Attributes that can be used with a LinearLayoutCompat.
            <p>Includes the following attributes:</p>
            <table>

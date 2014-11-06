@@ -29,6 +29,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,8 +39,11 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.aaaliua.adapter.RecyclerViewAdapter;
 import com.aaaliua.utils.FragmentViewPagerAdapter;
 import com.aaaliua.view.PagerSlidingTabStrip;
+import com.aaaliua.widget.PullRefreshLayout;
+import com.melnykov.fab.FloatingActionButton;
 import com.saulmm.material.fragments.ContentFragment;
 import com.saulmm.material.slidingtabs.views.SlidingTabLayout;
 
@@ -89,8 +95,14 @@ public class SlidingTabsBasicFragment extends android.support.v4.app.Fragment {
     	
     	fragments = new ArrayList<Fragment>();
 		for(int i = 0 ;i<TITLES.length;i++){
-			Fragment fm = new ContentFragment();
-			fragments.add(fm);
+			if(i == 0){
+				Fragment fm =new RecyclerViewFragment();
+				fragments.add(fm);
+			}else{
+				
+				Fragment fm = new ContentFragment();
+				fragments.add(fm);
+			}
 		}
     	
         mView = (View) view.findViewById(R.id.layer);
@@ -230,7 +242,56 @@ public class SlidingTabsBasicFragment extends android.support.v4.app.Fragment {
     
     
     
+   
+    
+    public static class RecyclerViewFragment extends Fragment {
+    	PullRefreshLayout layout;
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+            View root = inflater.inflate(R.layout.fragment_recyclerview, container, false);
+
+            layout = (PullRefreshLayout) root.findViewById(R.id.swipeRefreshLayout);
+            final RecyclerView recyclerView = (RecyclerView) root.findViewById(R.id.recycler_view);
+            recyclerView.setHasFixedSize(true);
+            recyclerView.setItemAnimator(new DefaultItemAnimator());
+            recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+            recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST));
+
+            RecyclerViewAdapter adapter = new RecyclerViewAdapter(getActivity(), getResources()
+                .getStringArray(R.array.countries));
+            recyclerView.setAdapter(adapter);
+
+            FloatingActionButton fab = (FloatingActionButton) root.findViewById(R.id.fab);
+            fab.attachToRecyclerView(recyclerView);
+
+            
+            layout.setRefreshStyle(PullRefreshLayout.STYLE_RING);
+            layout.setOnRefreshListener(new PullRefreshLayout.OnRefreshListener() {
+                @Override
+                public void onRefresh() {
+                    layout.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            layout.setRefreshing(false);
+                        }
+                    }, 4000);
+                }
+            });
+            return root;
+        }
+    }
     
     
+//    switch (id){
+//    case R.id.action_circles:
+//        layout.setRefreshStyle(PullRefreshLayout.STYLE_CIRCLES);
+//        return true;
+//    case R.id.action_water_drop:
+//        layout.setRefreshStyle(PullRefreshLayout.STYLE_WATER_DROP);
+//        return true;
+//    case R.id.action_ring:
+//        layout.setRefreshStyle(PullRefreshLayout.STYLE_RING);
+//        return true;
+//}
     
 }

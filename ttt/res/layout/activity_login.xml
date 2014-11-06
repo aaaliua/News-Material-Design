@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sample_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5677fc"
+    android:orientation="vertical" >
+
+      <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+         android:background="@android:color/transparent"
+         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+         app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:minHeight="?attr/actionBarSize"/>
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dip"
+        android:layout_marginRight="16dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log In"
+            android:textColor="@android:color/white"
+            android:textSize="50sp" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="User Name"
+            android:textCursorDrawable="@drawable/text_cursor_cyan"
+            app:baseColor="@android:color/white"
+            app:floatingLabel="highlight"
+            app:primaryColor="?colorAccent"
+            app:singleLineEllipsis="true" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textCursorDrawable="@drawable/text_cursor_cyan"
+            app:baseColor="@android:color/white"
+            app:floatingLabel="highlight"
+            app:maxCharacters="20"
+            app:primaryColor="?colorAccent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <com.aaaliua.fancybuttons.FancyButton
+                android:id="@+id/btn_create_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="20dp"
+                android:padding="10dp"
+                fancy:borderColor="#FFFFFF"
+                fancy:borderWidth="0dp"
+                fancy:defaultColor="#5677fc"
+                fancy:focusColor="@color/transalt_"
+                fancy:radius="30dp"
+                fancy:text="Create an account"
+                fancy:textColor="#FFFFFF" />
+
+            <com.aaaliua.fancybuttons.FancyButton
+                android:id="@+id/btn_login"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                fancy:borderColor="#FFFFFF"
+                fancy:borderWidth="0dp"
+                fancy:defaultColor="#5677fc"
+                fancy:focusColor="@color/transalt_"
+             
+                fancy:radius="30dp"  
+                fancy:text="Login"
+                fancy:textColor="#FFFFFF" />  <!--   fancy:fontIconResource="@string/icon_user"
+                fancy:iconPosition="left"  -->
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--
+            fancy:radius 边框弧度
+            borderColor  边框颜色
+            borderWidth  边框宽 
+            defaultColor 背景颜色
+            focusColor   焦点颜色
+            horizontal_line 是否有分割线
+    -->
+
+    <com.aaaliua.fancybuttons.FancyButton
+        android:id="@+id/btn_twitter_follow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:padding="8dp"
+        fancy:borderColor="#FFFFFF"
+        fancy:borderWidth="0px"
+        fancy:defaultColor="#5677fc"
+        fancy:focusColor="@color/transalt_"
+        fancy:horizontal_line="true"
+        fancy:iconResource="@drawable/twitter"
+        fancy:radius="15dp"
+        fancy:text="Follow me on Twitter"
+        fancy:textColor="#FFFFFF" />
+
+</RelativeLayout>

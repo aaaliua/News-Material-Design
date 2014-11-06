@@ -13,8 +13,7 @@
         android:layout_height="wrap_content"
         android:windowContentOverlay="@color/theme_toolbar"
          android:elevation="2dp"
-         android:translationZ="2dp"
-         android:translationY="10dp"
+         
         >
     <com.aaaliua.view.PagerSlidingTabStrip
         android:id="@+id/sliding_tabs"

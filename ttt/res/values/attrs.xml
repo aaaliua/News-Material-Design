@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <declare-styleable name="circulprogress">
         <attr name="mdimes" format="float"></attr>
         <attr name="mcolor" format="color"></attr>
         <attr name="mangel" format="integer"></attr>
         <attr name="msweep" format="integer"></attr>
     </declare-styleable>
-    <!--类似google play 引导  -->
-      <declare-styleable name="PagerSlidingTabStrip">
+    <!-- 类似google play 引导 -->
+    <declare-styleable name="PagerSlidingTabStrip">
         <attr name="pstsIndicatorColor" format="color" />
         <attr name="pstsUnderlineColor" format="color" />
         <attr name="pstsDividerColor" format="color" />
@@ -20,36 +21,35 @@
         <attr name="pstsShouldExpand" format="boolean" />
         <attr name="pstsTextAllCaps" format="boolean" />
     </declare-styleable>
-    
-    <!-- 重写了LinearLayout  定义了一些属性 -->
-    <declare-styleable name="WPLinearLayoutSizeBound">
-        <attr name="maxWidth" format="dimension" />
-        <attr name="maxHeight" format="dimension" />
-    </declare-styleable>
-    
-     <!--
-     Edittext的自定义属性
-    -->
-    <declare-styleable name="WPTypeface">
-        <attr name="fontVariation" format="enum">
-            <enum name="normal" value="0"/>
-            <enum name="light" value="1"/>
+    <declare-styleable name="PullRefreshLayout">
+        <attr name="type" format="enum">
+            <enum name="circles" value="0" />
+            <enum name="water_drop" value="1" />
+            <enum name="ring" value="2" />
         </attr>
+        <attr name="colors" format="reference" />
     </declare-styleable>
-    
-    <!--变幻actionbar  -->
-      <declare-styleable name="ActionView">
-        <attr name="av_color" format="color"/>
-        <attr name="av_action" format="enum">
-            <enum name="drawer" value="0"/>
-            <enum name="back" value="1"/>
-            <enum name="close" value="2"/>
-            <enum name="plus" value="3"/>
+    <declare-styleable name="FancyButtonsAttrs">
+        <attr name="defaultColor" format="color" />
+        <attr name="text" format="string" />
+        <attr name="textColor" format="color" />
+        <attr name="textFont" format="string" />
+        <attr name="iconFont" format="string" />
+        <attr name="textSize" format="dimension" />
+        <attr name="iconResource" format="integer" />
+        <attr name="fontIconResource" format="string" />
+        <attr name="fontIconSize" format="dimension" />
+        <attr name="iconPosition" format="enum">
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+            <enum name="top" value="3" />
+            <enum name="bottom" value="4" />
         </attr>
+        <attr name="borderColor" format="color" />
+        <attr name="borderWidth" format="dimension" />
+        <attr name="focusColor" format="color" />
+        <attr name="radius" format="dimension" />
+        <attr name="horizontal_line" format="boolean" />
     </declare-styleable>
-    <!--圆形imageview的自定义参数  -->
-      <declare-styleable name="CircleImageView">
-        <attr name="border_width" format="dimension" />
-        <attr name="border_color" format="color" />
-    </declare-styleable>
+
 </resources>

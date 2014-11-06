@@ -20,6 +20,7 @@
             android:orientation="vertical" >
 
             <RelativeLayout
+                android:id="@+id/userHeader"
                 android:layout_width="match_parent"
                 android:layout_height="72dip"
                 android:background="@drawable/bg_banner_dialog"
@@ -31,17 +32,15 @@
                     android:background="#30000000"
                     android:orientation="vertical" >
                 </LinearLayout>
-                
-                <TextView 
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
                     android:text="用户"
-                    android:textSize="14sp"
-                    />
-                
-                
+                    android:textSize="14sp" />
+
             </RelativeLayout>
 
             <LinearLayout

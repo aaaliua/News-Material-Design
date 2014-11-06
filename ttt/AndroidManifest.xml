@@ -10,6 +10,7 @@
 
     <application
         android:allowBackup="true"
+        android:name="com.aaaliua.application.MyApplication"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
@@ -24,6 +25,7 @@
         </activity>
         
         <activity android:name="com.example.ttt.Test"></activity>
+        <activity android:name="com.example.ttt.LoginActivity"></activity>
     </application>
 
 </manifest>
