@@ -23,6 +23,7 @@ import java.util.List;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
@@ -39,6 +40,8 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.aaaliua.actionbarpulltorefresh.PullToRefreshLayout;
+import com.aaaliua.actionbarpulltorefresh.PullToRefreshLayout.OnRefreshListener;
 import com.aaaliua.adapter.RecyclerViewAdapter;
 import com.aaaliua.utils.FragmentViewPagerAdapter;
 import com.aaaliua.view.PagerSlidingTabStrip;
@@ -97,6 +100,9 @@ public class SlidingTabsBasicFragment extends android.support.v4.app.Fragment {
 		for(int i = 0 ;i<TITLES.length;i++){
 			if(i == 0){
 				Fragment fm =new RecyclerViewFragment();
+				fragments.add(fm);
+			}else if(i == 1){
+				Fragment fm = new ActionbarRecyclerViewFragment();
 				fragments.add(fm);
 			}else{
 				
@@ -279,6 +285,45 @@ public class SlidingTabsBasicFragment extends android.support.v4.app.Fragment {
             });
             return root;
         }
+    }
+    
+    
+    
+    
+    public static class ActionbarRecyclerViewFragment extends Fragment implements OnRefreshListener{
+    	PullToRefreshLayout layout;
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+            View root = inflater.inflate(R.layout.fragment_actionrecyclerview, container, false);
+
+            	
+            layout = (PullToRefreshLayout) root.findViewById(R.id.pull_to_refresh_layout);
+            layout.setOnRefreshListener(this);
+            final RecyclerView recyclerView = (RecyclerView) root.findViewById(R.id.recycler_view);
+            recyclerView.setHasFixedSize(true);
+            recyclerView.setItemAnimator(new DefaultItemAnimator());
+            recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+            recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST));
+
+            RecyclerViewAdapter adapter = new RecyclerViewAdapter(getActivity(), getResources()
+                .getStringArray(R.array.countries));
+            recyclerView.setAdapter(adapter);
+
+            FloatingActionButton fab = (FloatingActionButton) root.findViewById(R.id.fab);
+            fab.attachToRecyclerView(recyclerView);
+
+            
+            return root;
+        }
+		@Override
+		public void onRefresh() {
+			new Handler().postDelayed(new Runnable() {
+				
+				@Override
+				public void run() {
+				}
+			}, 3000);
+		}
     }
     
     

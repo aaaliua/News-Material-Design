@@ -12,6 +12,9 @@
     <string name="drawer_closed">Drawer Closed</string>
     <string name="description_search">搜索</string>
     
+      <string name="swipe_down_to_refresh">Swipe down to refresh</string>
+    <string name="refreshing">Refreshing</string>
+    
      <integer-array name="google_colors">
         <item>@color/red</item>
         <item>@color/blue</item>

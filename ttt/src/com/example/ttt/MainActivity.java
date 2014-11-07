@@ -3,14 +3,20 @@ package com.example.ttt;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.afollestad.materialdialogs.Theme;
+import com.jakewharton.scalpel.ScalpelFrameLayout;
 
 import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.internal.view.SupportMenuItem;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.SearchView;
+import android.support.v7.widget.SwitchCompat;
 import android.support.v7.widget.Toolbar;
 import android.annotation.SuppressLint;
 import android.app.FragmentTransaction;
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Build.VERSION;
@@ -22,6 +28,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.Toast;
 
 @SuppressLint({ "InlinedApi", "ResourceAsColor", "NewApi" })
 public class MainActivity extends ActionBarActivity {
@@ -29,6 +38,8 @@ public class MainActivity extends ActionBarActivity {
 	private DrawerLayout mDrawerLayout;
 	private ActionBarDrawerToggle mDrawerToggle;
 
+	private ScalpelFrameLayout scalpelView;;
+	private static boolean first = true;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -44,8 +55,28 @@ public class MainActivity extends ActionBarActivity {
 			getSupportFragmentManager().beginTransaction().replace(R.id.sample_content_fragment, new SlidingTabsBasicFragment()).commit();
 		}
 
+		
+		
 		configureToolbar();
 		configureDrawer();
+		
+		
+		//add scalpelview  this is debugview
+		scalpelView = (ScalpelFrameLayout)findViewById(R.id.scalpel);
+		SwitchCompat enabledSwitch = new SwitchCompat(this);
+		  enabledSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+		      @Override public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+		        if (first) {
+		          first = false;
+		          Toast.makeText(MainActivity.this, "first_run", Toast.LENGTH_LONG).show();
+		        }
+
+		        scalpelView.setLayerInteractionEnabled(isChecked);
+		        invalidateOptionsMenu();
+		      }
+		    });
+		  getSupportActionBar().setCustomView(enabledSwitch);
+		  getSupportActionBar().setDisplayOptions(getSupportActionBar().DISPLAY_SHOW_TITLE | getSupportActionBar().DISPLAY_SHOW_CUSTOM);
 	}
 
 	private void configureToolbar() {
@@ -108,6 +139,37 @@ public class MainActivity extends ActionBarActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
+		
+//		SearchManager searchManager =
+//				  (SearchManager) this.getSystemService(Context.SEARCH_SERVICE);
+//		SupportMenuItem searchMenuItem = ((SupportMenuItem) menu.findItem(R.id.menu_search));
+//		SearchView searchView = (SearchView) searchMenuItem.getActionView();
+//		searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+		
+		//add debug option
+		 menu.add("Draw Views")
+	        .setCheckable(true)
+	        .setChecked(scalpelView.isDrawingViews())
+	        .setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+	          @Override public boolean onMenuItemClick(MenuItem item) {
+	            boolean checked = !item.isChecked();
+	            item.setChecked(checked);
+	            scalpelView.setDrawViews(checked);
+	            return true;
+	          }
+	        });
+		 //drawable id
+	    menu.add("Draw IDs")
+	        .setCheckable(true)
+	        .setChecked(scalpelView.isDrawingIds())
+	        .setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+	          @Override public boolean onMenuItemClick(MenuItem item) {
+	            boolean checked = !item.isChecked();
+	            item.setChecked(checked);
+	            scalpelView.setDrawIds(checked);
+	            return true;
+	          }
+	        });
 		return true;
 	}
 
