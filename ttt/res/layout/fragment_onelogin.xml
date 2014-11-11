@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    >
+
+    
+      <com.saulmm.material.slidingtabs.views.TopCenterImageView
+        android:id="@+id/normal_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/guide_bg_sync" />
+
+    <com.saulmm.material.slidingtabs.views.TopCenterImageView
+        android:id="@+id/blurred_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"/>
+    
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/oneLogin_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</FrameLayout>

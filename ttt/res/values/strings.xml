@@ -15,6 +15,14 @@
       <string name="swipe_down_to_refresh">Swipe down to refresh</string>
     <string name="refreshing">Refreshing</string>
     
+    
+    <string name="onehint">Passion\ntowards\nYour Life\n_________</string>
+    <string name="birtydya_hint">You are the most precious birthday as the first schedule</string>
+    <string name="sigin_birtyday">Register Birthday</string>
+    <string name="in">Immediate use</string>
+    <string name="two_hint">The connection you are using a Calendar</string>
+    <string name="two_hint_child">By connecting to the calendar in other machine confirm to safer keeping your schedule. Please select your calendar in the following</string>
+    
      <integer-array name="google_colors">
         <item>@color/red</item>
         <item>@color/blue</item>

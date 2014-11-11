@@ -25,6 +25,16 @@
         android:title="@string/action_settings"
         app:showAsAction="never"/>
     <item
+        android:id="@+id/snack"
+        android:orderInCategory="100"
+        android:title="snack"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/onelogin"
+        android:orderInCategory="100"
+        android:title="onelogin"
+        app:showAsAction="never"/>
+    <item
         android:id="@+id/About"
         android:orderInCategory="100"
         android:title="About"

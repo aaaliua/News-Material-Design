@@ -24,8 +24,9 @@
             </intent-filter>
         </activity>
         
-        <activity android:name="com.example.ttt.Test"></activity>
-        <activity android:name="com.example.ttt.LoginActivity"></activity>
+        <activity android:name="com.example.ttt.Test" />
+        <activity android:name="com.example.ttt.LoginActivity" />
+        <activity android:name="com.example.ttt.OneLoginn" />
     </application>
 
 </manifest>

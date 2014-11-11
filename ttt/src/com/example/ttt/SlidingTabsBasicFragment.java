@@ -30,6 +30,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -264,7 +265,7 @@ public class SlidingTabsBasicFragment extends android.support.v4.app.Fragment {
             recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST));
 
             RecyclerViewAdapter adapter = new RecyclerViewAdapter(getActivity(), getResources()
-                .getStringArray(R.array.countries));
+                .getStringArray(R.array.countries),getActivity());
             recyclerView.setAdapter(adapter);
 
             FloatingActionButton fab = (FloatingActionButton) root.findViewById(R.id.fab);
@@ -306,7 +307,7 @@ public class SlidingTabsBasicFragment extends android.support.v4.app.Fragment {
             recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST));
 
             RecyclerViewAdapter adapter = new RecyclerViewAdapter(getActivity(), getResources()
-                .getStringArray(R.array.countries));
+                .getStringArray(R.array.countries),getActivity());
             recyclerView.setAdapter(adapter);
 
             FloatingActionButton fab = (FloatingActionButton) root.findViewById(R.id.fab);

@@ -7,7 +7,9 @@
     <com.aaaliua.actionbarpulltorefresh.PullToRefreshLayout
         android:id="@+id/pull_to_refresh_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent" 
+        android:elevation="4dp"
+        >
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view"

@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
@@ -12,7 +12,7 @@
         -->
     </style>
 
-    <!-- Application theme. -->
+    <!-- Application theme.Theme.AppCompat.Light -->
     <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
 
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
@@ -20,6 +20,17 @@
         <item name="colorPrimaryDark">@color/indigo_500</item>
         <item name="colorAccent">@color/cyan_500</item>
         <item name="android:windowContentOverlay">@null</item>
+         
+        
+     <!--<item name="actionBarPopupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="actionBarWidgetTheme">@null</item>
+        <item name="actionBarTheme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+
+        Panel attributes
+        <item name="listChoiceBackgroundIndicator">@drawable/abc_list_selector_holo_dark</item>
+
+        <item name="colorPrimaryDark">@color/primary_dark_material_dark</item>
+        <item name="colorPrimary">@color/primary_material_dark</item> -->
 
         <!--
          <item name="colorPrimary">@color/material_indigo_500</item>
@@ -56,5 +67,61 @@
         <item name="spb_colors">@array/gplus_colors</item>
     </style>
     
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	 <style name="SnackBar"/>
+
+    <style name="SnackBar.Container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:maxHeight">80dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/sb__snack_bkgnd</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="SnackBar.Message">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginLeft">@dimen/horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/horizontal_margin</item>
+        <item name="android:layout_marginTop">@dimen/vertical_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/vertical_margin_bottom</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="SnackBar.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/sb__button_selector</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginRight">@dimen/horizontal_margin</item>
+        <item name="android:layout_marginTop">@dimen/vertical_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/vertical_margin_bottom</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:textColor">@color/sb__default_button_text_color</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:editable">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:capitalize">characters</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
 
 </resources>

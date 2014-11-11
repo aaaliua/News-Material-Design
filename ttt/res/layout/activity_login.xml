@@ -70,7 +70,7 @@
                 fancy:borderWidth="0dp"
                 fancy:defaultColor="#5677fc"
                 fancy:focusColor="@color/transalt_"
-                fancy:radius="30dp"
+                fancy:radius="5dp"
                 fancy:text="Create an account"
                 fancy:textColor="#FFFFFF" />
 
@@ -88,7 +88,7 @@
                 fancy:defaultColor="#5677fc"
                 fancy:focusColor="@color/transalt_"
              
-                fancy:radius="30dp"  
+                fancy:radius="5dp"  
                 fancy:text="Login"
                 fancy:textColor="#FFFFFF" />  <!--   fancy:fontIconResource="@string/icon_user"
                 fancy:iconPosition="left"  -->
@@ -119,7 +119,7 @@
         fancy:focusColor="@color/transalt_"
         fancy:horizontal_line="true"
         fancy:iconResource="@drawable/twitter"
-        fancy:radius="15dp"
+        fancy:radius="5dp"
         fancy:text="Follow me on Twitter"
         fancy:textColor="#FFFFFF" />
 

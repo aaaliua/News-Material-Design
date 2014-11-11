@@ -15,6 +15,7 @@
     <color name="indigo_700">#303f9f</color>
     <color name="indigo_red">#5677fc</color>
     <color name="cyan_500">#00bcd4</color>
+    <color name="cyan_400">#c41411</color>
     <color name="material_indigo_500">#3F51B5</color>
     <color name="material_indigo_600">#3949AB</color>
     <color name="material_pink_500">#E91E63</color>
@@ -43,4 +44,11 @@
         <item>@color/gplus_color_4</item>
     </integer-array>
 
+    
+    
+    
+      <color name="sb__snack_bkgnd">#323232</color>
+    <color name="sb__transparent">#00000000</color>
+    <color name="sb__dim_white">#20FFFFFF</color>
+    <color name="sb__button_text_color">#FB6541</color>
 </resources>

@@ -84,4 +84,12 @@
         <attr name="spb_generate_background_with_colors" format="boolean"/>
         <attr name="spb_gradients" format="boolean"/>
     </declare-styleable>
+    
+      
+      <declare-styleable name="WPTypeface">
+        <attr name="fontVariation" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="light" value="1"/>
+        </attr>
+    </declare-styleable>
 </resources>
