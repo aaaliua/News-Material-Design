@@ -19,6 +19,9 @@ import android.widget.ImageView;
 
 public class oneFragment extends Fragment {
 
+	
+	ImageView v;
+	
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -29,9 +32,29 @@ public class oneFragment extends Fragment {
 	@Override
 	public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 		super.onViewCreated(view, savedInstanceState);
-		ImageView v = (ImageView)view.findViewById(R.id.swipe);
+		v = (ImageView)view.findViewById(R.id.swipe);
+		Animation translateAnimation = new TranslateAnimation(0.1f, -360.0f,0.9f,0.0f);  
+		Animation alphaAnimation = new AlphaAnimation(1.0f,0.0f);
+		alphaAnimation.setDuration(1000);
+		alphaAnimation.setRepeatCount(100);
+		alphaAnimation.setRepeatMode(Animation.RESTART);
 		
-		Animation translateAnimation = new TranslateAnimation(0.1f, -280.0f,0.9f,0.0f);  
+		//设置动画时间               
+		translateAnimation.setDuration(1000);
+		translateAnimation.setRepeatCount(100);
+		translateAnimation.setRepeatMode(Animation.RESTART);
+		AnimationSet set = new AnimationSet(true);  
+		set.addAnimation(translateAnimation);
+		set.addAnimation(alphaAnimation);
+		                            v.startAnimation(set);
+		
+		                            
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		Animation translateAnimation = new TranslateAnimation(0.1f, -360.0f,0.9f,0.0f);  
 		Animation alphaAnimation = new AlphaAnimation(1.0f,0.0f);
 		alphaAnimation.setDuration(1000);
 		alphaAnimation.setRepeatCount(100);
@@ -46,7 +69,9 @@ public class oneFragment extends Fragment {
 		set.addAnimation(alphaAnimation);
 		                            v.startAnimation(set);
 	}
-    
-    
-    
+
+
+	
+	
+	
 }

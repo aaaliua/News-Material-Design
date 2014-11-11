@@ -2,6 +2,7 @@ package com.aaaliua.application;
 
 import com.aaaliua.typeface.TypefaceCollection;
 import com.aaaliua.typeface.TypefaceHelper;
+import com.example.ttt.BuildConfig;
 
 import android.app.Application;
 import android.graphics.Typeface;
