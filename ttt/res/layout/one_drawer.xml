@@ -29,6 +29,15 @@
 	        android:layout_alignParentBottom="true"
 	        android:layout_marginBottom="60dip"
 	        />
+	    <ImageView 
+	        android:id="@+id/swipe"
+	        android:layout_width="62dip"
+	        android:layout_height="62dip"
+	        android:src="@drawable/guide_img_coachmark_slide"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginBottom="80dip"
+	        />
 	    
 	</RelativeLayout>
     
