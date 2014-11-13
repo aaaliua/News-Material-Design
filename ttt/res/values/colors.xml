@@ -4,9 +4,9 @@
     <!-- Theme colors -->
     <color name="theme_light">#F48FB1</color>
     <color name="theme_toolbar">#689F38</color>
-    <color name="theme_default_primary">#303f9f</color>
-    <color name="theme_default_primary_dark">#E91E63</color>
-    <color name="theme_window_background">#2A2A2A</color>
+    <color name="theme_default_primary">#546e7a</color>
+    <color name="theme_default_primary_dark">#546e7a</color>
+    <color name="theme_window_background">#546e7a</color>
     <color name="accent">#EEFF41</color>
     <color name="gray_row_color">#ff515252</color>
     <color name="software_textColor_selected">#00aeef</color>

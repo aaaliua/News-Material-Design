@@ -88,117 +88,7 @@
                     android:layout_marginTop="16dip"
                     android:orientation="vertical" >
 
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:orientation="horizontal"
-                        android:weightSum="5" >
 
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1" >
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:layout_marginRight="24dip"
-                                android:src="@drawable/ic_category_food" />
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1" >
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:layout_marginRight="24dip"
-                                android:src="@drawable/ic_category_health" />
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1" >
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@drawable/ic_category_hot" />
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1" >
-
-                            <ImageView
-                                android:id="@+id/loading"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true" />
-                        </RelativeLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="16dip"
-                        android:orientation="horizontal"
-                        android:weightSum="5" >
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1" >
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:layout_marginRight="24dip"
-                                android:src="@drawable/ic_category_live" />
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1" >
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:layout_marginRight="24dip"
-                                android:src="@drawable/ic_category_othor" />
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1" >
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@drawable/ic_category_shop" />
-                        </RelativeLayout>
-                    </LinearLayout>
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
@@ -213,12 +103,22 @@
                             android:layout_weight="1" >
 
                             <ImageView
+                                android:id="@+id/qq"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
                                 android:layout_centerVertical="true"
                                 android:layout_marginRight="24dip"
                                 android:src="@drawable/guide_btn_sync_qq_selected" />
+                            <TextView 
+                                android:layout_below="@+id/qq"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mail"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="#607d8b"
+                                android:textSize="12sp"
+                                />
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -227,12 +127,22 @@
                             android:layout_weight="1" >
 
                             <ImageView
+                                android:id="@+id/google"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
                                 android:layout_centerVertical="true"
                                 android:layout_marginRight="24dip"
                                 android:src="@drawable/guide_btn_sync_gg_selected" />
+                            <TextView 
+                                android:layout_below="@+id/google"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Google+"
+                                android:layout_centerHorizontal="true"
+                                android:textSize="12sp"
+                                android:textColor="#607d8b"
+                                />
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -241,12 +151,22 @@
                             android:layout_weight="1" >
 
                             <ImageView
+                                android:id="@+id/yahoo"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
                                 android:layout_centerVertical="true"
                                  android:layout_marginRight="24dip"
                                 android:src="@drawable/guide_btn_sync_yahoojp_pressed" />
+                            <TextView 
+                                android:layout_below="@+id/yahoo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Yahoo"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="#607d8b"
+                                android:textSize="12sp"
+                                />
                         </RelativeLayout>
                         <RelativeLayout
                             android:layout_width="0dp"
@@ -254,19 +174,26 @@
                             android:layout_weight="1" >
 
                             <ImageView
+                                android:id="@+id/yahoos"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
                                 android:layout_centerVertical="true"
                                  android:layout_marginRight="24dip"
                                 android:src="@drawable/guide_btn_sync_yahoojp_selected" />
+                            
+                             <TextView 
+                                android:layout_below="@+id/yahoos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Yahoo"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="#607d8b"
+                                android:textSize="12sp"
+                                />
+                            
                         </RelativeLayout>
                     </LinearLayout>
-   <View
-            android:layout_width="match_parent"
-            android:layout_height="1dip"
-            android:layout_above="@+id/bottom_sections"
-            android:background="#e8e8e8" />
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -281,12 +208,22 @@
                             android:layout_weight="1" >
 
                             <ImageView
+                                android:id="@+id/a139"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
                                 android:layout_centerVertical="true"
                                 android:layout_marginRight="24dip"
                                 android:src="@drawable/guide_btn_sync_139_selected" />
+                             <TextView 
+                                android:layout_below="@+id/a139"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="139"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="#607d8b"
+                                android:textSize="12sp"
+                                />
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -295,12 +232,22 @@
                             android:layout_weight="1" >
 
                             <ImageView
+                                android:id="@+id/ex"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
                                 android:layout_centerVertical="true"
                                 android:layout_marginRight="24dip"
                                 android:src="@drawable/guide_btn_sync_ex_selected" />
+                             <TextView 
+                                android:layout_below="@+id/ex"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Exchange"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="#607d8b"
+                                android:textSize="12sp"
+                                />
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -309,12 +256,22 @@
                             android:layout_weight="1" >
 
                             <ImageView
+                                android:id="@+id/icloud"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
                                 android:layout_centerVertical="true"
                                 android:layout_marginRight="24dip"
                                 android:src="@drawable/guide_btn_sync_icloud_selected" />
+                             <TextView 
+                                android:layout_below="@+id/icloud"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="iCloud"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="#607d8b"
+                                android:textSize="12sp"
+                                />
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -323,12 +280,22 @@
                             android:layout_weight="1" >
 
                             <ImageView
+                                android:id="@+id/icloud2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
                                 android:layout_centerVertical="true"
                                 android:layout_marginRight="24dip"
-                                android:src="@drawable/guide_btn_sync_icloud_selected" />
+                                android:src="@drawable/guide_btn_sync_icloud_pressed" />
+                            <TextView 
+                                android:layout_below="@+id/icloud2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="iCloud"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="#607d8b"
+                                android:textSize="12sp"
+                                />
                         </RelativeLayout>
                     </LinearLayout>
 

@@ -13,6 +13,7 @@ import com.saulmm.material.fragments.twoFragment;
 import com.saulmm.material.slidingtabs.views.Blur;
 import com.saulmm.material.slidingtabs.views.ImageUtils;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -23,8 +24,10 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.graphics.Palette;
 import android.widget.ImageView;
 
+@SuppressLint("NewApi")
 public class OneLoginn extends ActionBarActivity{
 
 	
@@ -43,6 +46,28 @@ public class OneLoginn extends ActionBarActivity{
 		
 		mBlurredImage = (ImageView) findViewById(R.id.blurred_image);
 		mNormalImage = (ImageView) findViewById(R.id.normal_image);
+		
+		
+		
+		
+//		Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.guide_bg_sync);
+//		Palette.generateAsync(bm,
+//		        new Palette.PaletteAsyncListener() {
+//		    @Override
+//		    public void onGenerated(Palette palette) {
+//		         Palette.Swatch vibrant =
+//		                 palette.getVibrantSwatch();
+////		          if (swatch != null) {
+////		              // If we have a vibrant color
+////		              // update the title TextView
+////		              titleView.setBackgroundColor(
+////		                  vibrant.getRgb());
+////		              titleView.setTextColor(
+////		                  vibrant.getTitleTextColor());
+////		          }
+//		         getWindow().setStatusBarColor(vibrant.getRgb());
+//		    }
+//		});
 		
 		
 		fragments = new ArrayList<Fragment>();

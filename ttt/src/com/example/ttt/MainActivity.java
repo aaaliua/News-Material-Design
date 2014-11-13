@@ -105,7 +105,7 @@ public class MainActivity extends ActionBarActivity {
 //			 getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);//底部
 		} else if (VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP) {
 
-			getWindow().setStatusBarColor(R.color.theme_toolbar);
+			getWindow().setStatusBarColor(R.color.indigo_red);
 		}
 
 		setSupportActionBar(mainToolbar);

@@ -53,7 +53,6 @@ public class NavigationFragment extends Fragment {
 				getActivity().startActivity(new Intent(getActivity(),LoginActivity.class));
 			}
 		});
-		 load = (ImageView)view.findViewById(R.id.loading);
 		
 	}
 	private ImageView load;

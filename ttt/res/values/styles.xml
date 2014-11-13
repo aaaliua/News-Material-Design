@@ -20,7 +20,6 @@
         <item name="colorPrimaryDark">@color/indigo_500</item>
         <item name="colorAccent">@color/cyan_500</item>
         <item name="android:windowContentOverlay">@null</item>
-         
         
      <!--<item name="actionBarPopupTheme">@style/ThemeOverlay.AppCompat.Light</item>
         <item name="actionBarWidgetTheme">@null</item>
