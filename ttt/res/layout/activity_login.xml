@@ -4,7 +4,7 @@
     android:id="@+id/sample_main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5677fc"
+    android:background="?colorPrimary"
     android:orientation="vertical" >
 
       <android.support.v7.widget.Toolbar
@@ -68,7 +68,7 @@
                 android:padding="10dp"
                 fancy:borderColor="#FFFFFF"
                 fancy:borderWidth="0dp"
-                fancy:defaultColor="#5677fc"
+                fancy:defaultColor="?colorPrimary"
                 fancy:focusColor="@color/transalt_"
                 fancy:radius="5dp"
                 fancy:text="Create an account"
@@ -85,7 +85,7 @@
                 android:paddingTop="10dp"
                 fancy:borderColor="#FFFFFF"
                 fancy:borderWidth="0dp"
-                fancy:defaultColor="#5677fc"
+                fancy:defaultColor="?colorPrimary"
                 fancy:focusColor="@color/transalt_"
              
                 fancy:radius="5dp"  
@@ -115,7 +115,7 @@
         android:padding="8dp"
         fancy:borderColor="#FFFFFF"
         fancy:borderWidth="0px"
-        fancy:defaultColor="#5677fc"
+        fancy:defaultColor="?colorPrimary"
         fancy:focusColor="@color/transalt_"
         fancy:horizontal_line="true"
         fancy:iconResource="@drawable/twitter"
