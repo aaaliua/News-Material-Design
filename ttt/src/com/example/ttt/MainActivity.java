@@ -169,6 +169,13 @@ public class MainActivity extends ActionBarActivity {
 		// SearchView searchView = (SearchView) searchMenuItem.getActionView();
 		// searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
 
+		
+		MenuItem searchItem = menu.findItem(R.id.menu_search);
+		SearchView searchView = (SearchView)searchItem.getActionView();
+		
+		searchView.setQueryHint("请输入关键字");
+		SearchManager searchManager = (SearchManager)getSystemService(Context.SEARCH_SERVICE);
+		searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
 		// add debug option
 		menu.add("Draw Views")
 				.setCheckable(true)
@@ -200,6 +207,15 @@ public class MainActivity extends ActionBarActivity {
 		return true;
 	}
 
+	@Override
+	protected void onNewIntent(Intent intent) {
+		super.onNewIntent(intent);
+		 if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+	            String query = intent.getStringExtra(SearchManager.QUERY);
+//	            doSearch(query);
+	        }
+	}
+	
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState) {
 		super.onPostCreate(savedInstanceState);
