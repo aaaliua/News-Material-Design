@@ -157,6 +157,7 @@ public class MainActivity extends ActionBarActivity {
 
 	}
 
+	SearchView searchView;
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -171,7 +172,7 @@ public class MainActivity extends ActionBarActivity {
 
 		
 		MenuItem searchItem = menu.findItem(R.id.menu_search);
-		SearchView searchView = (SearchView)searchItem.getActionView();
+		 searchView = (SearchView)searchItem.getActionView();
 		
 		searchView.setQueryHint("请输入关键字");
 		SearchManager searchManager = (SearchManager)getSystemService(Context.SEARCH_SERVICE);
@@ -213,6 +214,7 @@ public class MainActivity extends ActionBarActivity {
 		 if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
 	            String query = intent.getStringExtra(SearchManager.QUERY);
 //	            doSearch(query);
+	            searchView.setQueryHint(query);
 	        }
 	}
 	
