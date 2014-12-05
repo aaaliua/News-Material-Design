@@ -264,20 +264,24 @@ public class MainActivity extends ActionBarActivity {
 		if(id == R.id.onelogin){
 			startActivity(new Intent(this,OneLoginn.class));
 		}
+		if(id == R.id.swipe){
+			startActivity(new Intent(this,Swipe.class));
+		}
 
 		if (id == R.id.About) {
 			// show Material Dialog
-			new MaterialDialog.Builder(MainActivity.this)
-					.title("Permissions")
-					.content(
-							"This app determines your phone's location and shares it with Google in order to serve personalized alerts to you. This allows for a better overall app experience.")
-					.theme(Theme.LIGHT) // the default is light, so you don't
-										// need this line
-					.positiveText(R.string.accept) // the default is 'Accept'
-					.negativeText(R.string.decline) // leaving this line out
-													// will remove the negative
-													// button
-					.build().show();
+//			new MaterialDialog.Builder(MainActivity.this)
+//					.title("Permissions")
+//					.content(
+//							"This app determines your phone's location and shares it with Google in order to serve personalized alerts to you. This allows for a better overall app experience.")
+//					.theme(Theme.LIGHT) // the default is light, so you don't
+//										// need this line
+//					.positiveText(R.string.accept) // the default is 'Accept'
+//					.negativeText(R.string.decline) // leaving this line out
+//													// will remove the negative
+//													// button
+//					.build().show();
+			startActivity(new Intent(this,About.class));
 		}
 		if (id == R.id.snack) {
 			

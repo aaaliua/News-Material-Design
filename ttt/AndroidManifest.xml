@@ -34,6 +34,8 @@
         <activity android:name="com.example.ttt.Test" />
         <activity android:name="com.example.ttt.LoginActivity" />
         <activity android:name="com.example.ttt.OneLoginn" />
+        <activity android:name="com.example.ttt.Swipe" />
+        <activity android:name="com.example.ttt.About" />
     </application>
 
 </manifest>

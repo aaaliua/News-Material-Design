@@ -35,6 +35,11 @@
         android:title="onelogin"
         app:showAsAction="never"/>
     <item
+        android:id="@+id/swipe"
+        android:orderInCategory="100"
+        android:title="swipe"
+        app:showAsAction="never"/>
+    <item
         android:id="@+id/palette"
         android:orderInCategory="100"
         android:title="palette"
