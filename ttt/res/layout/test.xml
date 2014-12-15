@@ -1,27 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
 
-<LinearLayout
-     xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:app="http://schemas.android.com/apk/res-auto"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:orientation="vertical"
-      >
-      
-     <android.support.v7.widget.Toolbar
+    <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-         android:background="@color/theme_toolbar"
-         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-         app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        android:minHeight="?attr/actionBarSize"/>
+        android:background="@color/theme_toolbar"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
-    <ImageView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="#FFF000"
-        android:transitionName="aa"
-        android:id="@+id/b1"
-        android:elevation="10dp"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <com.aaaliua.load.library.LoadView
+            android:id="@+id/imageLoader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:loaderFrameDelay="40"
+            app:loaderType="intersect" />
+
+        <com.aaaliua.load.library.LoadView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:loaderFrameDelay="40"
+            app:loaderType="snake3d" />
+
+        <com.aaaliua.load.library.LoadView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:loaderFrameDelay="40"
+            app:loaderType="flipflop" />
+
+        <com.aaaliua.load.library.LoadView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:loaderFrameDelay="40"
+            app:loaderType="miniballs" />
+
+        <com.aaaliua.load.library.LoadView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:loaderFrameDelay="40"
+            app:loaderType="PULSE" />
+
+        <com.aaaliua.load.library.LoadView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:loaderFrameDelay="40"
+            app:loaderType="radar" />
+
+        <com.aaaliua.load.library.LoadView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:loaderFrameDelay="40"
+            app:loaderType="ringrace" />
+
+        <com.aaaliua.load.library.LoadView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:loaderFrameDelay="40"
+            app:loaderType="runningsnake" />
+        <com.aaaliua.load.library.LoadView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:loaderFrameDelay="40"
+            app:loaderType="searching" />
+        <com.aaaliua.load.library.LoadView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:loaderFrameDelay="40"
+            app:loaderType="skype" />
+        <com.aaaliua.load.library.LoadView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:loaderFrameDelay="40"
+            app:loaderType="spinandfade" />
+        <com.aaaliua.load.library.LoadView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:loaderFrameDelay="40"
+            app:loaderType="spinninggear" />
+        <com.aaaliua.load.library.LoadView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:loaderFrameDelay="40"
+            app:loaderType="timemachine" />
+        <com.aaaliua.load.library.LoadView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:loaderFrameDelay="40"
+            app:loaderType="windows8" />
+        <com.aaaliua.load.library.LoadView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:loaderFrameDelay="40"
+            app:loaderType="mapmarker" />
+    </LinearLayout>
+
 </LinearLayout>

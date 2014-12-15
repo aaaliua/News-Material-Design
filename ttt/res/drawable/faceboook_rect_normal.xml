@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:drawable="@drawable/facebook_rect_pressed" />
+ 
+  <item android:bottom="2dp">   <!-- 阴影高度 -->
+      <shape android:shape="rectangle">
+          <corners android:radius="4dp" />    <!-- 圆角 -->
+          <solid android:color="#3f51b5" />
+      </shape>
+  </item>
+</layer-list>

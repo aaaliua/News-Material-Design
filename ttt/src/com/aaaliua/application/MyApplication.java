@@ -19,6 +19,7 @@ public class MyApplication extends Application {
 	private TypefaceCollection mSystemDefaultTypeface;
 	/** Multiple custom typefaces support */
 	private TypefaceCollection mUbuntuTypeface;
+	private TypefaceCollection airnbn;
 
 	@Override public void onCreate() {
 		super.onCreate();
@@ -62,6 +63,12 @@ public class MyApplication extends Application {
 				.set(Typeface.ITALIC, Typeface.createFromAsset(getAssets(), "fonts/ubuntu/Ubuntu-RI.ttf"))
 				.set(Typeface.BOLD_ITALIC, Typeface.createFromAsset(getAssets(), "fonts/ubuntu/Ubuntu-BI.ttf"))
 				.create();
+		airnbn = new TypefaceCollection.Builder()
+		.set(Typeface.NORMAL, Typeface.createFromAsset(getAssets(), "fonts/circular_book.otf"))
+		.set(Typeface.BOLD, Typeface.createFromAsset(getAssets(), "fonts/circular_bold.otf"))
+		.set(Typeface.ITALIC, Typeface.createFromAsset(getAssets(), "fonts/circular_book.otf"))
+		.set(Typeface.BOLD_ITALIC, Typeface.createFromAsset(getAssets(), "fonts/circular_book.otf"))
+		.create();
 
 		// Multiple custom typefaces support
 		mSystemDefaultTypeface = TypefaceCollection.createSystemDefault();
@@ -90,5 +97,8 @@ public class MyApplication extends Application {
 	/** Multiple custom typefaces support */
 	public TypefaceCollection getUbuntuTypeface() {
 		return mUbuntuTypeface;
+	}
+	public TypefaceCollection getAirBnb() {
+		return airnbn;
 	}
 }

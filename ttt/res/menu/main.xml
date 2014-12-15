@@ -2,8 +2,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.ttt.MainActivity" >
-
-    <item
+    
+    
+   <item
         android:id="@+id/menu_search"
         android:actionViewClass="android.support.v7.widget.SearchView"
         android:icon="@drawable/ic_action_search"
@@ -45,9 +46,20 @@
         android:title="palette"
         app:showAsAction="never"/>
     <item
+        android:id="@+id/test"
+        android:orderInCategory="100"
+        android:title="test"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/airbnb"
+        android:orderInCategory="100"
+        android:title="airbnb"
+        app:showAsAction="never"/>
+    <item
         android:id="@+id/About"
         android:orderInCategory="100"
         android:title="About"
         app:showAsAction="never"/>
+    
 
 </menu>

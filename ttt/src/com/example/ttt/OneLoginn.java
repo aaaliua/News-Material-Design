@@ -103,7 +103,7 @@ public class OneLoginn extends ActionBarActivity{
 					BitmapFactory.Options options = new BitmapFactory.Options();
 					options.inSampleSize = 2;
 					Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.guide_bg_sync, options);
-					Bitmap newImg = Blur.fastblur(OneLoginn.this, image, 14);
+					Bitmap newImg = Blur.fastblur(OneLoginn.this, image, 8); 
 					ImageUtils.storeImage(newImg, blurredImage);
 					runOnUiThread(new Runnable() {
 
@@ -142,7 +142,7 @@ public class OneLoginn extends ActionBarActivity{
 			if(arg0 >0 ){
 				return;
 			}
-			mBlurredImage.setAlpha(arg1);
+			mBlurredImage.setAlpha(arg1 / 1.4f);
 //			Bitmap bmp = ((BitmapDrawable)img.getDrawable()).getBitmap();
 //			 if(bmp == null)
 //		            return;

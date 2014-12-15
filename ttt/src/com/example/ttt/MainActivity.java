@@ -2,6 +2,7 @@ package com.example.ttt;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.afollestad.materialdialogs.Theme;
+import com.airbnb.AirBnbLogin;
 import com.jakewharton.scalpel.ScalpelFrameLayout;
 import com.saulmm.material.slidingtabs.views.SnackBar;
 import com.saulmm.material.slidingtabs.views.SnackBar.OnMessageClickListener;
@@ -258,7 +259,10 @@ public class MainActivity extends ActionBarActivity {
 		if (id == R.id.menu_search) {
 			// AnalyticsManager.sendEvent(SCREEN_LABEL, "launchsearch", "");
 			// startActivity(new Intent(this, SearchActivity.class));
-
+			
+		}
+		if (id == R.id.test) {
+			startActivity(new Intent(this,Test.class));			
 		}
 		
 		if(id == R.id.onelogin){
@@ -266,6 +270,9 @@ public class MainActivity extends ActionBarActivity {
 		}
 		if(id == R.id.swipe){
 			startActivity(new Intent(this,Swipe.class));
+		}
+		if(id == R.id.airbnb){
+			startActivity(new Intent(this,AirBnbLogin.class));
 		}
 
 		if (id == R.id.About) {

@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.ttt.MainActivity" >
+ <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="如何使用Airbnb"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_settings2"
+        android:orderInCategory="100"
+        android:title="服务条款"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/snack"
+        android:orderInCategory="100"
+        android:title="隐私政策"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/bangzhu"
+        android:orderInCategory="100"
+        android:title="帮助"
+        app:showAsAction="never"/>
+    
+</menu>

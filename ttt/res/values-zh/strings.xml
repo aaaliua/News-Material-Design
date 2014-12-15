@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    
-    
-  <string name="birtydya_hint">"你把最珍爱的人的生日作为第一个日程安排"</string>
-	<string name="onehint">热情对待\n你的生活\n___________</string>
-	<string name="sigin_birtyday">登记生日</string>
-	<string name="in">立即使用</string>
-	  <string name="two_hint">连接您使用的Calendar</string>
-	  <string name="two_hint_child">连接calendar时通过在其他机器确认来更安全的保管您的日程安排。请在以下选择您要的calendar</string>
-	  
-	  
-	   <string name="about_cody"><![CDATA[
+    <string name="birtydya_hint">"你把最珍爱的人的生日作为第一个日程安排"</string>
+    <string name="onehint">热情对待\n你的生活\n___________</string>
+    <string name="sigin_birtyday">登记生日</string>
+    <string name="in">立即使用</string>
+    <string name="two_hint">连接您使用的Calendar</string>
+    <string name="two_hint_child">连接calendar时通过在其他机器确认来更安全的保管您的日程安排。请在以下选择您要的calendar</string>
+    <string name="about_cody">
+<![CDATA[
         Demo app for <a href="https://github.com/jpardogo/ListBuddies><i>ListBuddies</i></a>.
         Android library to achieve in an easy way, the behaviour of the home page
         in the <a href="https://play.google.com/store/apps/details?id=com.expedia.bookings">
@@ -29,5 +26,19 @@
 
         <b><a href="http://jakewharton.github.io/butterknife/">ButterKnife</a>&nbsp;</b><br>
         <i>by Jake Wharton</i><br><br>
-    ]]></string>
+    ]]>
+    </string>
+    <string name="xieyi">
+<![CDATA[
+        注册即表示我同意Airbnb的
+        <font color=\"#FF5A5F\">服务条款</p></font>、
+        <font color=\"#FF5A5F\">隐私政策</p></font>、
+        <font color=\"#FF5A5F\">房客退款政策</p></font>、
+        <font color=\"#FF5A5F\">房东保障计划条款</p></font>。
+        ]]>
+    </string>   <!-- <a href="www.baidu.com" style=\'text-decoration:none;color:red;\'>服务条款</a>、
+        <a href="www.baidu.com" style=\'text-decoration:none;color:red;\'>隐私政策</a>、
+        <a href="www.baidu.com" style=\'text-decoration:none;color:red;\'>房客退款政策</a>、
+        <a href="www.baidu.com" style=\'text-decoration:none;color:red;\'>房东保障计划条款</a> -->
+
 </resources>

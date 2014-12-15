@@ -1,0 +1,214 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sample_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/signin1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#30000000"
+        android:orientation="vertical" >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:animateLayoutChanges="true"
+            android:layout_above="@+id/xieyi"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:animateLayoutChanges="true"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_logo" />
+
+                <TextView
+                    android:id="@+id/user_nome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:gravity="center_horizontal"
+                    android:text="Airbnb"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@android:color/white"
+                    android:textSize="56sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dip"
+                    android:background="@drawable/flat_selector"
+                    android:clickable="true"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dip"
+                        android:src="@drawable/weibo_logo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="微博"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dip"
+                    android:layout_marginTop="8dip"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="48dip"
+                        android:layout_marginRight="4dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/mid_button"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="注册"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="48dip"
+                        android:layout_marginLeft="4dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/mid_button"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="登录"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dip"
+                    android:layout_marginBottom="18dip"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/more"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="显示更多"
+                             android:textColor="@android:color/white"
+                            android:textSize="16sp"
+                            />
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:id="@+id/google"
+                        android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dip"
+                    android:background="@drawable/flat_selector_google"
+                    android:clickable="true"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dip"
+                        android:src="@drawable/gplus" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="谷歌"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/facebook"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="8dip"
+                    android:layout_height="48dip"
+                    android:background="@drawable/flat_selector_facebook"
+                    android:clickable="true"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dip"
+                        android:src="@drawable/facebook" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="Facebook"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/xieyi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+             android:textColor="@android:color/white"
+            android:paddingBottom="50dip"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

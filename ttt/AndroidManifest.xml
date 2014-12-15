@@ -36,6 +36,7 @@
         <activity android:name="com.example.ttt.OneLoginn" />
         <activity android:name="com.example.ttt.Swipe" />
         <activity android:name="com.example.ttt.About" />
+        <activity android:name="com.airbnb.AirBnbLogin" />
     </application>
 
 </manifest>

@@ -25,7 +25,12 @@
         android:layout_marginLeft="16dip"
         android:layout_marginRight="16dip"
         android:orientation="vertical" >
-
+<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始探索，探索34,000多个城市，为您的下一次历险找住宿地"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -107,7 +112,7 @@
     <com.aaaliua.fancybuttons.FancyButton
         android:id="@+id/btn_twitter_follow"
         android:layout_width="match_parent"
-        android:layout_height="99dip"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="20dip"
