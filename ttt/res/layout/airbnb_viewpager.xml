@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageSwitcher
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="matrix"
+        android:src="@drawable/appintro1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#30000000"
+        android:orientation="vertical" >
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom" >
+
+            <com.aaaliua.view.HackyViewPager
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <!--
+                 <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="24dip"
+                android:text="向世界各地的当地房东租住独一无二的房源"
+                android:textSize="28sp"
+                android:textColor="@android:color/white"
+                />
+            -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            android:gravity="center" >
+<!-- radius代表圆圈大小   fillColor代表滚动的圈颜色   pageColor代表圈的背景颜色     strokeColor表示圈外围的颜色   strokeWidth表示圈外围大小 -->
+            <com.aaaliua.view.CirclePageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dip"
+                app:fillColor="@android:color/white"
+                app:pageColor="@android:color/transparent"
+                app:c_radius="4dp"
+                app:strokeColor="#fff"
+                app:strokeWidth="1dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            android:gravity="center" >
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/mid_button_trans"
+                android:text="注册" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dip"
+                android:layout_marginTop="2dip"
+                android:background="@android:color/black" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/mid_button_trans"
+                android:text="登录" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+</FrameLayout>

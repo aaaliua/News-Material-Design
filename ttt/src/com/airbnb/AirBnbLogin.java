@@ -1,5 +1,9 @@
 package com.airbnb;
 
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+import butterknife.OnClick;
+
 import com.aaaliua.application.MyApplication;
 import com.aaaliua.typeface.TypefaceHelper;
 import com.aaaliua.utils.Utils;
@@ -31,10 +35,11 @@ import android.widget.TextView;
 
 public class AirBnbLogin extends ActionBarActivity implements OnClickListener{
 
-	View more;
-	View google;
-	View facebook;
-	TextView t;
+	@InjectView(R.id.more)View more;
+	@InjectView(R.id.google)View google;
+	@InjectView(R.id.facebook)View facebook;
+	@InjectView(R.id.weibo)View weibo;
+	@InjectView(R.id.xieyi)TextView t;
 	
 	public static AlertDialog dlg;
 	@Override
@@ -42,6 +47,9 @@ public class AirBnbLogin extends ActionBarActivity implements OnClickListener{
 //		setTheme(android.R.style.Theme_Material_Light_NoActionBar);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.airbnb_login);
+		ButterKnife.inject(this);
+		
+		
 		TypefaceHelper.typeface(this,((MyApplication)getApplication()).getUbuntuTypeface());
 		
 		Toolbar mainToolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -52,15 +60,9 @@ public class AirBnbLogin extends ActionBarActivity implements OnClickListener{
 		
 		dlg = new AlertDialog.Builder(this).create();
 		
-		
-		t = (TextView)findViewById(R.id.xieyi);
-		more = findViewById(R.id.more);
-		google = findViewById(R.id.google);
-		facebook = findViewById(R.id.facebook);
-		
 		t.setText(Html.fromHtml(getString(R.string.xieyi,
 				Utils.getVersionName(this))));
-		more.setOnClickListener(this);
+		
 		
 		
 		if (VERSION.SDK_INT >= VERSION_CODES.KITKAT) {
@@ -70,6 +72,7 @@ public class AirBnbLogin extends ActionBarActivity implements OnClickListener{
 			mainToolbar.setPadding(0, 72, 0, 0);
 			// 透明导航栏
 			 getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);//底部
+			 t.setPadding(0, 0, 0, 40);
 		} else if (VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP) {
 
 		}
@@ -122,27 +125,39 @@ public class AirBnbLogin extends ActionBarActivity implements OnClickListener{
 			animationDrawable.start();
 			return true;
 		}
+		if(id == R.id.fuwu){
+			google.setVisibility(View.GONE);
+			facebook.setVisibility(View.GONE);
+			more.setVisibility(View.VISIBLE);
+		}
 		return super.onOptionsItemSelected(item);
 	}
 	
 	
 	
 	
-	
-	
+	@OnClick(R.id.more)
+	public void more(View v){
+		more.setVisibility(View.GONE);
+		google.setVisibility(View.VISIBLE);
+		facebook.setVisibility(View.VISIBLE);
+	}
+	@OnClick(R.id.weibo)
+	public void weibo(View v){
+		dlg.setCancelable(true);
+		dlg.show();
+		Window window = dlg.getWindow();
+		window.clearFlags(WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
+		window.setContentView(R.layout.dialog);
+		ImageView im = (ImageView)window.findViewById(R.id.image);
+		im.setImageResource(R.drawable.bnb_animation);
+		
+		animationDrawable = (AnimationDrawable)im.getDrawable();
+		animationDrawable.start();
+	}
 	
 	
 	@Override
 	public void onClick(View v) {
-		switch (v.getId()) {
-		case R.id.more:
-			more.setVisibility(View.GONE);
-			google.setVisibility(View.VISIBLE);
-			facebook.setVisibility(View.VISIBLE);
-			break;
-
-		default:
-			break;
-		}
 	}
 }

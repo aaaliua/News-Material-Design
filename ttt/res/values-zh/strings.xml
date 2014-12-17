@@ -36,9 +36,47 @@
         <font color=\"#FF5A5F\">房客退款政策</p></font>、
         <font color=\"#FF5A5F\">房东保障计划条款</p></font>。
         ]]>
-    </string>   <!-- <a href="www.baidu.com" style=\'text-decoration:none;color:red;\'>服务条款</a>、
+    </string>
+    <!--
+        <a href="www.baidu.com" style=\'text-decoration:none;color:red;\'>服务条款</a>、
         <a href="www.baidu.com" style=\'text-decoration:none;color:red;\'>隐私政策</a>、
         <a href="www.baidu.com" style=\'text-decoration:none;color:red;\'>房客退款政策</a>、
-        <a href="www.baidu.com" style=\'text-decoration:none;color:red;\'>房东保障计划条款</a> -->
-
+        <a href="www.baidu.com" style=\'text-decoration:none;color:red;\'>房东保障计划条款</a>
+    -->
+ <string name="content1">
+<![CDATA[  
+        <font  color=\"white\">向世界各地的当地房东租住独一无二的房源</p></font><br>
+        ]]>
+    </string>
+    
+    <string name="content2">
+<![CDATA[  
+        <font color=\"white\">找到最理想的住处</p></font><br>
+        ]]>
+    </string>
+    <string name="content2child">
+<![CDATA[  
+         <font  color=\"white\">按地点、房源类型和更多筛选条件进行搜索。阅读评价，看看旅行者们是如何评价各位房东及房源的。</p></font>
+        ]]>
+    </string>
+    <string name="content3">
+<![CDATA[  
+        <font  color=\"white\">轻松完成预约手续</p></font><br>
+        ]]>
+    </string>
+    <string name="content3child">
+<![CDATA[  
+         <font  color=\"white\">联系房东、确认旅行日期、支付一切都能通过Airbnb值得信赖的服务完成。</p></font>
+        ]]>
+    </string>
+ <string name="content4">
+<![CDATA[ 
+        <font  color=\"white\">即日启程</p></font><br>
+        ]]>
+    </string>
+ <string name="content4child">
+<![CDATA[ 
+         <font  color=\"white\">您可以再旅途中随时随地了解您的房东、让他们为您提供一些当地建议，并查看您的行程单。</p></font>
+        ]]>
+    </string>
 </resources>

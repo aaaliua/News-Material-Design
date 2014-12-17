@@ -37,6 +37,7 @@
         <activity android:name="com.example.ttt.Swipe" />
         <activity android:name="com.example.ttt.About" />
         <activity android:name="com.airbnb.AirBnbLogin" />
+        <activity android:name="com.airbnb.ViewpagerImage" />
     </application>
 
 </manifest>

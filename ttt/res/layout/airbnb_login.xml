@@ -30,9 +30,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_above="@+id/xieyi"
             android:layout_below="@+id/toolbar"
             android:animateLayoutChanges="true"
-            android:layout_above="@+id/xieyi"
             android:orientation="vertical" >
 
             <LinearLayout
@@ -69,6 +69,7 @@
                 android:orientation="vertical" >
 
                 <RelativeLayout
+                    android:id="@+id/weibo"
                     android:layout_width="match_parent"
                     android:layout_height="48dip"
                     android:background="@drawable/flat_selector"
@@ -125,8 +126,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="14dip"
                     android:layout_marginBottom="18dip"
+                    android:layout_marginTop="14dip"
                     android:animateLayoutChanges="true"
                     android:orientation="vertical" >
 
@@ -136,63 +137,65 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:orientation="vertical" >
-                        <TextView 
+
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="显示更多"
-                             android:textColor="@android:color/white"
-                            android:textSize="16sp"
-                            />
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp" />
                     </LinearLayout>
+
                     <RelativeLayout
                         android:id="@+id/google"
-                        android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dip"
-                    android:background="@drawable/flat_selector_google"
-                    android:clickable="true"
-                    android:gravity="center_vertical" >
+                        android:layout_width="match_parent"
+                        android:layout_height="48dip"
+                        android:background="@drawable/flat_selector_google"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:visibility="gone" >
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dip"
-                        android:src="@drawable/gplus" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dip"
+                            android:src="@drawable/gplus" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:text="谷歌"
-                        android:layout_centerVertical="true"
-                        android:textColor="@android:color/white"
-                        android:textSize="16sp" />
-                </RelativeLayout>
-                <RelativeLayout
-                    android:id="@+id/facebook"
-                    android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="8dip"
-                    android:layout_height="48dip"
-                    android:background="@drawable/flat_selector_facebook"
-                    android:clickable="true"
-                    android:gravity="center_vertical" >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="谷歌"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dip"
-                        android:src="@drawable/facebook" />
+                    <RelativeLayout
+                        android:id="@+id/facebook"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dip"
+                        android:layout_marginTop="8dip"
+                        android:background="@drawable/flat_selector_facebook"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:visibility="gone" >
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:text="Facebook"
-                        android:textColor="@android:color/white"
-                        android:textSize="16sp" />
-                </RelativeLayout>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dip"
+                            android:src="@drawable/facebook" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="Facebook"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -202,12 +205,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:gravity="center_horizontal"
             android:layout_centerHorizontal="true"
+            android:layout_marginBottom="48dip"
             android:layout_marginLeft="8dip"
             android:layout_marginRight="8dip"
-             android:textColor="@android:color/white"
-            android:paddingBottom="50dip"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/white"
             android:textSize="16sp" />
     </RelativeLayout>
 
