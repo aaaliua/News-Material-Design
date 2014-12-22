@@ -3,6 +3,7 @@ package com.example.ttt;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.afollestad.materialdialogs.Theme;
 import com.airbnb.AirBnbLogin;
+import com.airbnb.ParallaxActivity;
 import com.airbnb.ViewpagerImage;
 import com.jakewharton.scalpel.ScalpelFrameLayout;
 import com.saulmm.material.slidingtabs.views.SnackBar;
@@ -267,8 +268,14 @@ public class MainActivity extends ActionBarActivity {
 		}
 		
 		if(id == R.id.onelogin){
-//			startActivity(new Intent(this,OneLoginn.class));
+			startActivity(new Intent(this,OneLoginn.class));
+			
+		}
+		if(id == R.id.airbnbViewpager){
 			startActivity(new Intent(this,ViewpagerImage.class));
+		}
+		if(id == R.id.Parallax){
+			startActivity(new Intent(this,ParallaxActivity.class));
 		}
 		if(id == R.id.swipe){
 			startActivity(new Intent(this,Swipe.class));

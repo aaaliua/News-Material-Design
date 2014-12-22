@@ -56,6 +56,16 @@
         android:title="airbnb"
         app:showAsAction="never"/>
     <item
+        android:id="@+id/airbnbViewpager"
+        android:orderInCategory="100"
+        android:title="airbnbViewpager"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/Parallax"
+        android:orderInCategory="100"
+        android:title="Parallax"
+        app:showAsAction="never"/>
+    <item
         android:id="@+id/About"
         android:orderInCategory="100"
         android:title="About"

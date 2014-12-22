@@ -7,11 +7,11 @@ import butterknife.ButterKnife.Finder;
 public class ViewpagerImage$$ViewInjector {
   public static void inject(Finder finder, final com.airbnb.ViewpagerImage target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131492964, "field 'mIndicator'");
+    view = finder.findRequiredView(source, 2131492975, "field 'mIndicator'");
     target.mIndicator = (com.aaaliua.view.CirclePageIndicator) view;
-    view = finder.findRequiredView(source, 2131492963, "field 'pagers'");
+    view = finder.findRequiredView(source, 2131492974, "field 'pagers'");
     target.pagers = (com.aaaliua.view.HackyViewPager) view;
-    view = finder.findRequiredView(source, 2131492965, "field 'background'");
+    view = finder.findRequiredView(source, 2131492976, "field 'background'");
     target.background = (android.widget.LinearLayout) view;
   }
 

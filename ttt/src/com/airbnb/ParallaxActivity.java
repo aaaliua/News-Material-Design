@@ -1,0 +1,16 @@
+package com.airbnb;
+
+import com.example.ttt.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+
+public class ParallaxActivity extends ActionBarActivity{
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.fragment_parallax_everywhere_barcelona);
+	}
+}
