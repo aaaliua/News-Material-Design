@@ -6,21 +6,25 @@
         android:id="@+id/ruhe"
         android:orderInCategory="100"
         android:title="如何使用Airbnb"
+         android:icon="@drawable/ofm_qrcode_icon"
         app:showAsAction="never"/>
     <item
         android:id="@+id/fuwu"
         android:orderInCategory="100"
         android:title="服务条款"
+         android:icon="@drawable/ofm_qrcode_icon"
         app:showAsAction="never"/>
     <item
         android:id="@+id/yinsi"
         android:orderInCategory="100"
         android:title="隐私政策"
+         android:icon="@drawable/ofm_qrcode_icon"
         app:showAsAction="never"/>
     <item
         android:id="@+id/bangzhu"
         android:orderInCategory="100"
         android:title="帮助"
+         android:icon="@drawable/ofm_qrcode_icon"
         app:showAsAction="never"/>
     
 </menu>

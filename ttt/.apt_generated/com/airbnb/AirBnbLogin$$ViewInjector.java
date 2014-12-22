@@ -7,8 +7,6 @@ import butterknife.ButterKnife.Finder;
 public class AirBnbLogin$$ViewInjector {
   public static void inject(Finder finder, final com.airbnb.AirBnbLogin target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131492957, "field 't'");
-    target.t = (android.widget.TextView) view;
     view = finder.findRequiredView(source, 2131492959, "field 'weibo' and method 'weibo'");
     target.weibo = view;
     view.setOnClickListener(
@@ -33,13 +31,15 @@ public class AirBnbLogin$$ViewInjector {
           target.more(p0);
         }
       });
+    view = finder.findRequiredView(source, 2131492957, "field 't'");
+    target.t = (android.widget.TextView) view;
   }
 
   public static void reset(com.airbnb.AirBnbLogin target) {
-    target.t = null;
     target.weibo = null;
     target.google = null;
     target.facebook = null;
     target.more = null;
+    target.t = null;
   }
 }

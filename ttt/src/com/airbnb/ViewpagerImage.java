@@ -47,9 +47,9 @@ public class ViewpagerImage extends ActionBarActivity implements ViewFactory , V
 	List<Fragment> fragments;
 	
 	ValueAnimator colorAnim = null;
-	private static final int RED = 0xffF4B400;
-	private static final int BLUE = 0xff4285F4;
-	private static final int WHITE = 0xff00bcd4;
+	private static final int RED = 0xffe84e40;
+	private static final int BLUE = 0xffF4B400;  	
+	private static final int WHITE = 0xff4285F4;
 	private static final int GREEN = 0xff0B8043;
 	private static final int DURATION = 3000;
 	
@@ -59,6 +59,7 @@ public class ViewpagerImage extends ActionBarActivity implements ViewFactory , V
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.airbnb_viewpager);
 		ButterKnife.inject(this);
+		
 		TypefaceHelper.typeface(this,((MyApplication)getApplication()).getUbuntuTypeface());
 		Toolbar mainToolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(mainToolbar);

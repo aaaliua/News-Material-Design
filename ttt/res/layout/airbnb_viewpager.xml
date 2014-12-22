@@ -56,11 +56,11 @@
                 android:id="@+id/indicator"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:padding="24dip"
+                android:padding="4dip"
                 app:fillColor="@android:color/white"
-                app:pageColor="@android:color/transparent"
-                app:c_radius="4dp"
-                app:strokeColor="#fff"
+                app:pageColor="#30ffffff"
+                app:c_radius="5dp"
+                app:strokeColor="#30ffffff"
                 app:strokeWidth="1dp" />
         </LinearLayout>
 
@@ -75,6 +75,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/mid_button_trans"
+                android:textSize="18sp"
                 android:text="注册" />
 
             <View
@@ -88,6 +89,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:textSize="18sp"
                 android:background="@drawable/mid_button_trans"
                 android:text="登录" />
         </LinearLayout>
