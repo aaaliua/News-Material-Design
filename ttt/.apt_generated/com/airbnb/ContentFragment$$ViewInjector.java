@@ -7,14 +7,14 @@ import butterknife.ButterKnife.Finder;
 public class ContentFragment$$ViewInjector {
   public static void inject(Finder finder, final com.airbnb.ContentFragment target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131492991, "field 'hintchild'");
-    target.hintchild = (android.widget.TextView) view;
     view = finder.findRequiredView(source, 2131492990, "field 'hint'");
     target.hint = (android.widget.TextView) view;
+    view = finder.findRequiredView(source, 2131492991, "field 'hintchild'");
+    target.hintchild = (android.widget.TextView) view;
   }
 
   public static void reset(com.airbnb.ContentFragment target) {
-    target.hintchild = null;
     target.hint = null;
+    target.hintchild = null;
   }
 }

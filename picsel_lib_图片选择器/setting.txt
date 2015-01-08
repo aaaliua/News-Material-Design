@@ -1,0 +1,32 @@
+
+使用方法：（1）
+
+AndroidManifest.xml 文件中注册
+    <!-- 图片选择器 -->
+        <activity
+            android:name="com.mark.imageloader.PicSelActivity"
+            android:screenOrientation="portrait" />
+
+（2）代码中调用
+
+
+        调用：
+        Intent intent = new Intent(getBaseActivity(), PicSelActivity.class);
+                if (pics != null) {
+                        intent.putExtra(PicSelActivity.RESULT_PICS_ARRAY, pics);
+                }
+                startActivityForResult(intent, PicSelActivity.REQUEST_PICS_CODE);
+
+
+         取照片
+@Override
+        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+super.onActivityResult(requestCode, resultCode, data);
+                   if (requestCode == PicSelActivity.REQUEST_PICS_CODE
+                                && PicSelActivity.RESULT_PICS_OK_CODE == resultCode) {
+                        pics = data
+                                        .getStringArrayListExtra(PicSelActivity.RESULT_PICS_ARRAY);
+
+              }
+}

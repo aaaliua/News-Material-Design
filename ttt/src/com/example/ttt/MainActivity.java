@@ -10,6 +10,7 @@ import com.saulmm.material.slidingtabs.views.SnackBar;
 import com.saulmm.material.slidingtabs.views.SnackBar.OnMessageClickListener;
 
 import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.app.Fragment;
 import android.support.v4.internal.view.SupportMenuItem;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
@@ -49,11 +50,12 @@ public class MainActivity extends ActionBarActivity {
 
 	private Toolbar toolbar;
 
+	private View fragmtn;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
+		fragmtn = findViewById(R.id.navigation_drawer);
 		if (savedInstanceState == null) {
 			// FragmentTransaction transaction = getFragmentManager()
 			// .beginTransaction();
@@ -139,12 +141,23 @@ public class MainActivity extends ActionBarActivity {
 			public void onDrawerClosed(View view) {
 				supportInvalidateOptionsMenu();
 				getSupportActionBar().setTitle("首页");
+				if(searchView != null){
+					searchView.setVisibility(View.VISIBLE);
+				};
+					
+				invalidateOptionsMenu();
 			}
 
 			public void onDrawerOpened(View drawerView) {
 				supportInvalidateOptionsMenu(); // creates call to
 												// onPrepareOptionsMenu()
+				if(searchView != null){
+					searchView.setVisibility(View.GONE);
+				}
+				
 				getSupportActionBar().setTitle("功能列表");
+				invalidateOptionsMenu();
+				
 			}
 
 			@Override
@@ -152,7 +165,8 @@ public class MainActivity extends ActionBarActivity {
 				// TODO Auto-generated method stub
 				super.onDrawerSlide(drawerView, slideOffset);
 				System.out.println(slideOffset);
-//				toolbar.getBackground().setAlpha((int) slideOffset * 20);
+//				toolbar.setAlpha((int)slideOffset * 1.1f);
+//				searchView.setAlpha((int)slideOffset * 1.1f);
 			}
 
 		};
@@ -264,7 +278,8 @@ public class MainActivity extends ActionBarActivity {
 			
 		}
 		if (id == R.id.test) {
-			startActivity(new Intent(this,Test.class));			
+//			startActivity(new Intent(this,Test.class));			
+			startActivity(new Intent(this,TestMain.class));			
 		}
 		
 		if(id == R.id.onelogin){
@@ -347,5 +362,14 @@ public class MainActivity extends ActionBarActivity {
 	public void onConfigurationChanged(Configuration newConfig) {
 		super.onConfigurationChanged(newConfig);
 		mDrawerToggle.onConfigurationChanged(newConfig);
+	}
+	
+	@Override
+	public boolean onPrepareOptionsMenu(Menu menu) {
+		boolean b = mDrawerLayout.isDrawerOpen(fragmtn);
+		System.out.println(b);
+//		menu.findItem(R.id.menu_search).setVisible(!b);
+		return super.onPrepareOptionsMenu(menu);
+		
 	}
 }

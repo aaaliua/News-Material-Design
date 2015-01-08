@@ -8,5 +8,5 @@
     
     
      <item android:drawable="@drawable/mid_radio_press" android:state_pressed="true"/>
-    <item android:drawable="@drawable/mid_radio_normal"/>
+    <item android:drawable="@drawable/mid_radio_normal"/> 
 </selector>

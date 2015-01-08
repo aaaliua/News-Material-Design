@@ -44,6 +44,7 @@ public class NavigationFragment extends Fragment {
 	public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 		super.onViewCreated(view, savedInstanceState);
 		View v = view.findViewById(R.id.userHeader);
+		View vs = view.findViewById(R.id.select);
 		ImageView use = (ImageView)view.findViewById(R.id.userPhoto);
 		use.setImageBitmap(ImageViewUtils.getCroppedBitmap(new BitmapFactory().decodeResource(getResources(), R.drawable.photo)));
 		v.setOnClickListener(new OnClickListener() {
@@ -53,6 +54,8 @@ public class NavigationFragment extends Fragment {
 				getActivity().startActivity(new Intent(getActivity(),LoginActivity.class));
 			}
 		});
+		
+		vs.setSelected(true);
 		
 	}
 	private ImageView load;

@@ -9,6 +9,16 @@ public class AirBnbLogin$$ViewInjector {
     View view;
     view = finder.findRequiredView(source, 2131492972, "field 'google'");
     target.google = view;
+    view = finder.findRequiredView(source, 2131492970, "field 'weibo' and method 'weibo'");
+    target.weibo = view;
+    view.setOnClickListener(
+      new android.view.View.OnClickListener() {
+        @Override public void onClick(
+          android.view.View p0
+        ) {
+          target.weibo(p0);
+        }
+      });
     view = finder.findRequiredView(source, 2131492971, "field 'more' and method 'more'");
     target.more = view;
     view.setOnClickListener(
@@ -23,23 +33,13 @@ public class AirBnbLogin$$ViewInjector {
     target.facebook = view;
     view = finder.findRequiredView(source, 2131492968, "field 't'");
     target.t = (android.widget.TextView) view;
-    view = finder.findRequiredView(source, 2131492970, "field 'weibo' and method 'weibo'");
-    target.weibo = view;
-    view.setOnClickListener(
-      new android.view.View.OnClickListener() {
-        @Override public void onClick(
-          android.view.View p0
-        ) {
-          target.weibo(p0);
-        }
-      });
   }
 
   public static void reset(com.airbnb.AirBnbLogin target) {
     target.google = null;
+    target.weibo = null;
     target.more = null;
     target.facebook = null;
     target.t = null;
-    target.weibo = null;
   }
 }
